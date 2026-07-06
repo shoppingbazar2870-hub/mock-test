@@ -1,0 +1,3820 @@
+{
+  "version": "v4-json-external",
+  "tests": [
+    {
+      "id": "web-dev-1",
+      "title": "React & Modern Web Development",
+      "description": "Test your understanding of modern React (v18/19), JSX behavior, hooks execution order, concurrent rendering, and general browser event loop mechanics.",
+      "category": "Web Development",
+      "timeLimit": 10,
+      "totalMarks": 20,
+      "difficulty": "Medium",
+      "questions": [
+        {
+          "id": "wd_q1",
+          "text": "In React 18+, which hook is used to mark a state update as non-blocking transition, allowing the user interface to remain responsive during heavy rendering?",
+          "type": "single",
+          "options": [
+            "useDeferredValue",
+            "useTransition",
+            "useId",
+            "useLayoutEffect"
+          ],
+          "correctAnswer": "1",
+          "explanation": "useTransition is a React Hook that lets you update the state without blocking the UI. It returns an isPending flag and a startTransition function. useDeferredValue does a similar job but is passed a value instead of wrapping the update function.",
+          "subject": "React Core"
+        },
+        {
+          "id": "wd_q2",
+          "text": "What is the primary difference between useEffect and useLayoutEffect in React?",
+          "type": "single",
+          "options": [
+            "useEffect is only for server-side rendering while useLayoutEffect is for client-side rendering.",
+            "useEffect fires asynchronously AFTER the browser has completed layout and paint. useLayoutEffect fires synchronously BEFORE the browser paints the screen.",
+            "useEffect runs on every render, whereas useLayoutEffect runs only on mount.",
+            "useEffect cannot access DOM nodes, while useLayoutEffect can access DOM nodes directly."
+          ],
+          "correctAnswer": "1",
+          "explanation": "useEffect is deferred and runs asynchronously after the paint, making it suitable for API calls or subscriptions. useLayoutEffect runs synchronously immediately after DOM mutations but BEFORE the browser paints.",
+          "subject": "React Hooks"
+        },
+        {
+          "id": "wd_q3",
+          "text": "Which of the following statements about the JavaScript Event Loop are correct? (Select all that apply)",
+          "type": "multiple",
+          "options": [
+            "Promises callbacks (microtasks) have higher priority than setTimeout callbacks (macrotasks).",
+            "The event loop is blocked when a synchronous heavy loop is running on the main thread.",
+            "All microtasks queue must be cleared before the event loop proceeds to the next macrotask.",
+            "Web Workers run on the same thread as the event loop and can directly access the DOM."
+          ],
+          "correctAnswer": "0,1,2",
+          "explanation": "Microtasks have higher priority than macrotasks; heavy sync work blocks the main thread; the microtask queue is drained fully before the next macrotask; Web Workers run on separate threads and cannot touch the DOM directly.",
+          "subject": "JavaScript Runtime"
+        },
+        {
+          "id": "wd_q4",
+          "text": "Evaluate the output of 'typeof NaN' in JavaScript.",
+          "type": "single",
+          "options": [
+            "\"NaN\"",
+            "\"undefined\"",
+            "\"number\"",
+            "\"object\""
+          ],
+          "correctAnswer": "2",
+          "explanation": "NaN is technically a numeric data type, so typeof NaN returns \"number\".",
+          "subject": "JavaScript Basics"
+        },
+        {
+          "id": "wd_q5",
+          "text": "What is the result of 1 + 2 + '3' + 4 in JavaScript?",
+          "type": "single",
+          "options": [
+            "\"1234\"",
+            "\"334\"",
+            "10",
+            "\"64\""
+          ],
+          "correctAnswer": "1",
+          "explanation": "1 + 2 = 3 (number). 3 + '3' coerces to string '33'. '33' + 4 = '334'.",
+          "subject": "JavaScript Operations"
+        }
+      ]
+    },
+    {
+      "id": "jee-phys-1",
+      "title": "JEE Main Physics: Kinematics & Laws of Motion",
+      "description": "Highly focused practice test covering Newton's Laws, Friction, Circular Motion, and Projectile equations. Perfect for engineering candidates.",
+      "category": "JEE Prep",
+      "timeLimit": 15,
+      "totalMarks": 20,
+      "difficulty": "Hard",
+      "questions": [
+        {
+          "id": "phy_q1",
+          "text": "A projectile is thrown from the ground with an initial velocity of 20 m/s at an angle of 30 degrees with the horizontal. Taking g = 10 m/s², what is the total flight time of the projectile in seconds?",
+          "type": "numerical",
+          "correctAnswer": "2",
+          "explanation": "T = (2·u·sinθ)/g = (2·20·0.5)/10 = 2 seconds.",
+          "subject": "Kinematics"
+        },
+        {
+          "id": "phy_q2",
+          "text": "A block of mass 5 kg is lying on a rough horizontal surface with coefficient of static friction μ_s = 0.4 and coefficient of kinetic friction μ_k = 0.3. A horizontal force of 15 N is applied to the block. Taking g = 10 m/s², what is the frictional force (in Newtons) acting on the block?",
+          "type": "numerical",
+          "correctAnswer": "15",
+          "explanation": "Max static friction = 0.4×5×10 = 20N. Applied force (15N) < max static friction, so block stays still and friction exactly balances the applied force: 15N.",
+          "subject": "Laws of Motion"
+        },
+        {
+          "id": "phy_q3",
+          "text": "Which of the following statements are correct regarding conservative and non-conservative forces? (Select all that apply)",
+          "type": "multiple",
+          "options": [
+            "The work done by a conservative force in a closed loop is always zero.",
+            "Frictional force and viscous force are examples of conservative forces.",
+            "A conservative force can be expressed as negative gradient of a potential energy function.",
+            "The work done by a conservative force depends only on the initial and final positions of the body."
+          ],
+          "correctAnswer": "0,2,3",
+          "explanation": "Friction and viscous force are NON-conservative (they dissipate energy); the other three statements are true of conservative forces.",
+          "subject": "Work, Energy & Power"
+        },
+        {
+          "id": "phy_q4",
+          "text": "A particle is moving in a circle of radius 10m with a constant tangential speed of 10 m/s. What is the magnitude of its centripetal acceleration in m/s²?",
+          "type": "numerical",
+          "correctAnswer": "10",
+          "explanation": "a_c = v²/r = 100/10 = 10 m/s².",
+          "subject": "Circular Motion"
+        },
+        {
+          "id": "phy_q5",
+          "text": "A body of mass 2 kg falls freely from a height of 10 m under gravity. Taking g = 10 m/s² and neglecting air resistance, what is its kinetic energy in Joules just before striking the ground?",
+          "type": "numerical",
+          "correctAnswer": "200",
+          "explanation": "KE gained = PE lost = m·g·h = 2×10×10 = 200 J.",
+          "subject": "Conservation of Energy"
+        }
+      ]
+    },
+    {
+      "id": "neet-bio-1",
+      "title": "NEET Biology: Human Physiology & Genetics",
+      "description": "Practice questions aligned with the latest NEET syllabus, testing anatomy, DNA replication mechanisms, genetics cross structures, and physiological regulation.",
+      "category": "NEET Prep",
+      "timeLimit": 12,
+      "totalMarks": 20,
+      "difficulty": "Medium",
+      "questions": [
+        {
+          "id": "bio_q1",
+          "text": "Which hormone combination is primarily responsible for the secretion of milk in human mothers and its ejection during suckling?",
+          "type": "single",
+          "options": [
+            "Progesterone for secretion, Estrogen for ejection",
+            "Prolactin for secretion, Oxytocin for ejection",
+            "Oxytocin for secretion, Prolactin for ejection",
+            "LH for secretion, FSH for ejection"
+          ],
+          "correctAnswer": "1",
+          "explanation": "Prolactin stimulates milk synthesis; Oxytocin triggers the milk ejection reflex.",
+          "subject": "Endocrine Regulation"
+        },
+        {
+          "id": "bio_q2",
+          "text": "If a double-stranded DNA molecule contains 20% Adenine bases, what is the percentage of Cytosine bases present in this DNA molecule?",
+          "type": "single",
+          "options": [
+            "20%",
+            "40%",
+            "30%",
+            "60%"
+          ],
+          "correctAnswer": "2",
+          "explanation": "A=T=20% each (40% total). G+C = 60%, and since G=C, Cytosine = 30%.",
+          "subject": "Molecular Basis of Inheritance"
+        },
+        {
+          "id": "bio_q3",
+          "text": "Identify the correct anatomical path of oxygenated blood flow returning from the lungs in a human body.",
+          "type": "single",
+          "options": [
+            "Pulmonary artery -> Left atrium -> Left ventricle -> Aorta",
+            "Pulmonary vein -> Right atrium -> Right ventricle -> Pulmonary artery",
+            "Pulmonary vein -> Left atrium -> Left ventricle -> Aorta",
+            "Pulmonary artery -> Right atrium -> Left ventricle -> Superior vena cava"
+          ],
+          "correctAnswer": "2",
+          "explanation": "Pulmonary veins carry oxygenated blood to the Left atrium → Left ventricle → Aorta.",
+          "subject": "Circulatory System"
+        },
+        {
+          "id": "bio_q4",
+          "text": "A cross between a true-breeding red-flowered plant (RR) and a true-breeding white-flowered plant (rr) results in all pink-flowered F1 progeny. This genetic phenomenon is an example of:",
+          "type": "single",
+          "options": [
+            "Codominance",
+            "Incomplete Dominance",
+            "Epistasis",
+            "Multiple Alleles"
+          ],
+          "correctAnswer": "1",
+          "explanation": "Incomplete dominance produces an intermediate phenotype (pink) between the two parental phenotypes.",
+          "subject": "Mendelian Genetics"
+        },
+        {
+          "id": "bio_q5",
+          "text": "Which of the following cellular components are membrane-bound organelles? (Select all that apply)",
+          "type": "multiple",
+          "options": [
+            "Mitochondria",
+            "Ribosomes",
+            "Lysosomes",
+            "Centrosome"
+          ],
+          "correctAnswer": "0,2",
+          "explanation": "Mitochondria and Lysosomes are membrane-bound; Ribosomes and Centrosomes are not.",
+          "subject": "Cell Structure and Function"
+        }
+      ]
+    },
+    {
+      "id": "upsc-gs-1",
+      "title": "UPSC Civil Services: Indian Polity & History",
+      "description": "Assess your expertise on the Indian Constitution, the freedom struggle, federal structures, and legislative processes. Drafted in true UPSC standard style.",
+      "category": "UPSC Prep",
+      "timeLimit": 12,
+      "totalMarks": 20,
+      "difficulty": "Hard",
+      "questions": [
+        {
+          "id": "upsc_q1",
+          "text": "Consider the following statements regarding the 'Preamble' of the Indian Constitution:\n1. It is based on the 'Objective Resolution' drafted and moved by Jawaharlal Nehru.\n2. It has been amended only once so far, by the 42nd Constitutional Amendment Act of 1976.\n3. The Preamble is a source of power to the legislature and can be enforced in a court of law.\n\nWhich of the statements given above are correct?",
+          "type": "single",
+          "options": [
+            "1 and 2 only",
+            "2 and 3 only",
+            "1 and 3 only",
+            "1, 2, and 3"
+          ],
+          "correctAnswer": "0",
+          "explanation": "Statements 1 and 2 are correct. The Preamble is NOT enforceable in courts (statement 3 is false).",
+          "subject": "Indian Constitution"
+        },
+        {
+          "id": "upsc_q2",
+          "text": "With reference to the Indian freedom struggle, who among the following organized a non-violent volunteer corps known as 'Khudai Khidmatgars' (Servants of God), popularly called Red Shirts?",
+          "type": "single",
+          "options": [
+            "Maulana Abul Kalam Azad",
+            "Khan Abdul Ghaffar Khan",
+            "Muhammad Ali Jinnah",
+            "Liaqat Ali Khan"
+          ],
+          "correctAnswer": "1",
+          "explanation": "Khan Abdul Ghaffar Khan ('Frontier Gandhi') founded the Khudai Khidmatgar movement.",
+          "subject": "Modern Indian History"
+        },
+        {
+          "id": "upsc_q3",
+          "text": "Under which article of the Indian Constitution can the President of India declare a 'Financial Emergency'?",
+          "type": "single",
+          "options": [
+            "Article 352",
+            "Article 356",
+            "Article 360",
+            "Article 368"
+          ],
+          "correctAnswer": "2",
+          "explanation": "Article 360 empowers the President to proclaim a Financial Emergency.",
+          "subject": "Indian Polity"
+        },
+        {
+          "id": "upsc_q4",
+          "text": "Which of the following constitutional provisions are key pillars of Indian Federalism? (Select all that apply)",
+          "type": "multiple",
+          "options": [
+            "A written and rigid Constitution.",
+            "Dual citizenship for all residents.",
+            "An independent judiciary to resolve disputes.",
+            "Division of powers between Union and State lists."
+          ],
+          "correctAnswer": "0,2,3",
+          "explanation": "India has SINGLE citizenship, so statement 2 is false; the rest are true pillars of federalism.",
+          "subject": "Federal Structure"
+        },
+        {
+          "id": "upsc_q5",
+          "text": "How many schedules are currently present in the Constitution of India?",
+          "type": "numerical",
+          "correctAnswer": "12",
+          "explanation": "Originally 8 schedules; currently there are 12 after amendments.",
+          "subject": "Constitutional Schedules"
+        }
+      ]
+    },
+    {
+      "id": "aptitude-1",
+      "title": "General Aptitude: Reasoning & Quantitative",
+      "description": "Evaluate your mental math and logical deductions with standard reasoning questions involving sequences, work rate ratios, speed calculations, and relative structures.",
+      "category": "General Aptitude",
+      "timeLimit": 12,
+      "totalMarks": 20,
+      "difficulty": "Easy",
+      "questions": [
+        {
+          "id": "apt_q1",
+          "text": "A and B can complete a piece of work in 12 days and 18 days respectively. If they work together, how many days will it take them to finish the entire work?",
+          "type": "single",
+          "options": [
+            "7.2 days",
+            "6.5 days",
+            "8 days",
+            "7.5 days"
+          ],
+          "correctAnswer": "0",
+          "explanation": "Joint rate = 1/12 + 1/18 = 5/36 per day → 36/5 = 7.2 days.",
+          "subject": "Work and Time"
+        },
+        {
+          "id": "apt_q2",
+          "text": "Complete the letter series: SCD, TEF, UGH, ____, WKL",
+          "type": "single",
+          "options": [
+            "CMN",
+            "VIJ",
+            "UJI",
+            "IJT"
+          ],
+          "correctAnswer": "1",
+          "explanation": "First letters go S,T,U,V,W; pairs go CD,EF,GH,IJ,KL → VIJ.",
+          "subject": "Logical Series"
+        },
+        {
+          "id": "apt_q3",
+          "text": "A train running at a speed of 72 km/h crosses a stationary telegraph post in 15 seconds. What is the length of the train in meters?",
+          "type": "numerical",
+          "correctAnswer": "300",
+          "explanation": "72 km/h = 20 m/s. Length = 20×15 = 300 m.",
+          "subject": "Speed & Distance"
+        },
+        {
+          "id": "apt_q4",
+          "text": "A shopkeeper sells a product for $240, making a profit of 20%. What was the cost price of the product in dollars?",
+          "type": "numerical",
+          "correctAnswer": "200",
+          "explanation": "SP = CP×1.2 → CP = 240/1.2 = 200.",
+          "subject": "Profit and Loss"
+        },
+        {
+          "id": "apt_q5",
+          "text": "In a family, there are a husband, a wife, two sons, and two daughters. All daughters are invited to a feast. Both sons went out to play. The husband is at work. Who is left at home?",
+          "type": "single",
+          "options": [
+            "None",
+            "Only the Wife",
+            "The Wife and Daughters",
+            "The Husband and Wife"
+          ],
+          "correctAnswer": "1",
+          "explanation": "Daughters at the feast, sons out playing, husband at work — only the Wife remains home.",
+          "subject": "Logical Deduction"
+        }
+      ]
+    },
+    {
+      "id": "bank-1",
+      "title": "Bank PO/Clerk: Quantitative Aptitude & Reasoning",
+      "description": "Practice set aligned with IBPS PO, IBPS Clerk, and SBI exam patterns — covering simplification, ratio, seating arrangement, and number series.",
+      "category": "Bank Exams",
+      "timeLimit": 12,
+      "totalMarks": 20,
+      "difficulty": "Medium",
+      "questions": [
+        {
+          "id": "bank_q1",
+          "text": "The simple interest on a sum of ₹8,000 at a rate of 5% per annum for 3 years is:",
+          "type": "numerical",
+          "correctAnswer": "1200",
+          "explanation": "SI = (P×R×T)/100 = (8000×5×3)/100 = ₹1200.",
+          "subject": "Simple Interest"
+        },
+        {
+          "id": "bank_q2",
+          "text": "Find the next number in the series: 2, 6, 12, 20, 30, ?",
+          "type": "single",
+          "options": [
+            "36",
+            "40",
+            "42",
+            "44"
+          ],
+          "correctAnswer": "2",
+          "explanation": "Differences are 4,6,8,10,12 → pattern n(n+1): 30+12=42.",
+          "subject": "Number Series"
+        },
+        {
+          "id": "bank_q3",
+          "text": "In a row of 40 students, Rahul is 12th from the left. What is his position from the right?",
+          "type": "numerical",
+          "correctAnswer": "29",
+          "explanation": "Position from right = (Total - position from left) + 1 = (40-12)+1 = 29.",
+          "subject": "Seating Arrangement"
+        },
+        {
+          "id": "bank_q4",
+          "text": "Which of the following statements about the RBI's monetary policy tools are correct? (Select all that apply)",
+          "type": "multiple",
+          "options": [
+            "Repo rate is the rate at which RBI lends to commercial banks.",
+            "CRR is the percentage of deposits banks must hold as cash with RBI.",
+            "SLR requires banks to hold a portion of deposits in liquid assets like gold or government securities.",
+            "Bank rate and repo rate are always identical."
+          ],
+          "correctAnswer": "0,1,2",
+          "explanation": "Repo rate, CRR, and SLR are correctly described; bank rate and repo rate are distinct tools and not always equal.",
+          "subject": "Banking Awareness"
+        }
+      ]
+    },
+    {
+      "id": "ssc-1",
+      "title": "SSC CGL/CHSL: General Awareness & Quant",
+      "description": "Covers SSC-pattern static GK, simplification, percentage problems, and English grammar basics for CGL, CHSL, and MTS aspirants.",
+      "category": "SSC Exams",
+      "timeLimit": 12,
+      "totalMarks": 20,
+      "difficulty": "Medium",
+      "questions": [
+        {
+          "id": "ssc_q1",
+          "text": "Who is regarded as the Father of the Indian Constitution?",
+          "type": "single",
+          "options": [
+            "Mahatma Gandhi",
+            "Dr. B.R. Ambedkar",
+            "Jawaharlal Nehru",
+            "Sardar Vallabhbhai Patel"
+          ],
+          "correctAnswer": "1",
+          "explanation": "Dr. B.R. Ambedkar chaired the Drafting Committee of the Constituent Assembly.",
+          "subject": "Static GK"
+        },
+        {
+          "id": "ssc_q2",
+          "text": "A number increased by 20% becomes 180. What is the original number?",
+          "type": "numerical",
+          "correctAnswer": "150",
+          "explanation": "Let x be the number: 1.2x = 180 → x = 150.",
+          "subject": "Percentage"
+        },
+        {
+          "id": "ssc_q3",
+          "text": "Choose the correctly spelled word.",
+          "type": "single",
+          "options": [
+            "Recieve",
+            "Acheive",
+            "Occurred",
+            "Seperate"
+          ],
+          "correctAnswer": "2",
+          "explanation": "'Occurred' is spelled correctly; the others should be 'Receive', 'Achieve', and 'Separate'.",
+          "subject": "English Grammar"
+        },
+        {
+          "id": "ssc_q4",
+          "text": "The headquarters of the United Nations is located in:",
+          "type": "single",
+          "options": [
+            "Geneva",
+            "New York",
+            "Paris",
+            "The Hague"
+          ],
+          "correctAnswer": "1",
+          "explanation": "The UN headquarters is in New York City, USA.",
+          "subject": "Static GK"
+        }
+      ]
+    },
+    {
+      "id": "railway-1",
+      "title": "Railway RRB NTPC/Group D: General Science & Math",
+      "description": "RRB-pattern questions on general science, basic mathematics, and current affairs relevant to NTPC, Group D, and ALP exams.",
+      "category": "Railway Exams",
+      "timeLimit": 12,
+      "totalMarks": 20,
+      "difficulty": "Medium",
+      "questions": [
+        {
+          "id": "rail_q1",
+          "text": "Which gas is most abundant in the Earth's atmosphere?",
+          "type": "single",
+          "options": [
+            "Oxygen",
+            "Carbon Dioxide",
+            "Nitrogen",
+            "Argon"
+          ],
+          "correctAnswer": "2",
+          "explanation": "Nitrogen makes up about 78% of the Earth's atmosphere.",
+          "subject": "General Science"
+        },
+        {
+          "id": "rail_q2",
+          "text": "A train 150m long crosses a platform 250m long in 20 seconds. What is the speed of the train in m/s?",
+          "type": "numerical",
+          "correctAnswer": "20",
+          "explanation": "Total distance = 150+250 = 400m. Speed = 400/20 = 20 m/s.",
+          "subject": "Speed & Distance"
+        },
+        {
+          "id": "rail_q3",
+          "text": "The SI unit of electric current is:",
+          "type": "single",
+          "options": [
+            "Volt",
+            "Watt",
+            "Ampere",
+            "Ohm"
+          ],
+          "correctAnswer": "2",
+          "explanation": "The ampere (A) is the SI unit of electric current.",
+          "subject": "Physics"
+        },
+        {
+          "id": "rail_q4",
+          "text": "Which of the following are organelles found in a typical animal cell? (Select all that apply)",
+          "type": "multiple",
+          "options": [
+            "Mitochondria",
+            "Chloroplast",
+            "Golgi apparatus",
+            "Cell wall"
+          ],
+          "correctAnswer": "0,2",
+          "explanation": "Mitochondria and Golgi apparatus are present in animal cells; chloroplast and cell wall are found in plant cells, not animal cells.",
+          "subject": "Biology"
+        }
+      ]
+    },
+    {
+      "id": "state-tet-1",
+      "title": "State PSC / TET: Teaching Aptitude & Pedagogy",
+      "description": "Practice questions on child development, teaching methods, and pedagogy for State PSC, State TET, and CTET aspirants.",
+      "category": "State & Teaching Exams",
+      "timeLimit": 12,
+      "totalMarks": 20,
+      "difficulty": "Easy",
+      "questions": [
+        {
+          "id": "tet_q1",
+          "text": "According to Piaget's theory, a child in the 'Concrete Operational' stage typically falls in which age range?",
+          "type": "single",
+          "options": [
+            "0-2 years",
+            "2-7 years",
+            "7-11 years",
+            "11+ years"
+          ],
+          "correctAnswer": "2",
+          "explanation": "The Concrete Operational stage in Piaget's theory spans roughly ages 7 to 11 years.",
+          "subject": "Child Development"
+        },
+        {
+          "id": "tet_q2",
+          "text": "Which of the following are formative assessment techniques? (Select all that apply)",
+          "type": "multiple",
+          "options": [
+            "Class quizzes and quick oral questions",
+            "Final annual board examination",
+            "Peer feedback during a lesson",
+            "Observation checklists during activities"
+          ],
+          "correctAnswer": "0,2,3",
+          "explanation": "Formative assessment happens during learning (quizzes, peer feedback, observation); the final board exam is a summative assessment.",
+          "subject": "Assessment & Evaluation"
+        },
+        {
+          "id": "tet_q3",
+          "text": "The Right to Education (RTE) Act, 2009 guarantees free and compulsory education for children of which age group?",
+          "type": "single",
+          "options": [
+            "3 to 6 years",
+            "6 to 14 years",
+            "6 to 18 years",
+            "5 to 12 years"
+          ],
+          "correctAnswer": "1",
+          "explanation": "The RTE Act, 2009 mandates free and compulsory education for children aged 6 to 14 years.",
+          "subject": "Education Policy"
+        }
+      ]
+    },
+    {
+      "id": "defence-1",
+      "title": "NDA/CDS: General Knowledge & Reasoning",
+      "description": "Defence exam-pattern questions on current affairs, basic reasoning, and general science for NDA and CDS aspirants.",
+      "category": "Defence Exams",
+      "timeLimit": 12,
+      "totalMarks": 20,
+      "difficulty": "Hard",
+      "questions": [
+        {
+          "id": "def_q1",
+          "text": "Who is the current Chief of Defence Staff (CDS) of India, as per your general awareness of the post's role — what is the CDS primarily responsible for?",
+          "type": "single",
+          "options": [
+            "Commanding all three armed forces in battle directly",
+            "Acting as the single-point military advisor to the government",
+            "Managing only the Indian Air Force",
+            "Handling foreign diplomatic relations"
+          ],
+          "correctAnswer": "1",
+          "explanation": "The Chief of Defence Staff acts as the principal military advisor to the Government of India and heads the Department of Military Affairs.",
+          "subject": "Defence & Current Affairs"
+        },
+        {
+          "id": "def_q2",
+          "text": "If North becomes East, East becomes South, and so on (each direction rotates 90° clockwise), what was the original direction if a person is now facing South?",
+          "type": "single",
+          "options": [
+            "North",
+            "East",
+            "West",
+            "South"
+          ],
+          "correctAnswer": "2",
+          "explanation": "Rotating 90° clockwise: North→East→South→West→North. Working backward from South, the original direction was West.",
+          "subject": "Reasoning"
+        },
+        {
+          "id": "def_q3",
+          "text": "Which Indian missile system is a supersonic cruise missile jointly developed with Russia?",
+          "type": "single",
+          "options": [
+            "Agni-V",
+            "BrahMos",
+            "Prithvi",
+            "Akash"
+          ],
+          "correctAnswer": "1",
+          "explanation": "BrahMos is a supersonic cruise missile jointly developed by India and Russia.",
+          "subject": "Defence & Current Affairs"
+        }
+      ]
+    },
+    {
+      "id": "ibps-po",
+      "title": "IBPS PO Prelims Practice Set",
+      "description": "Practice quantitative aptitude, reasoning, and banking awareness questions in the pattern of the IBPS PO Preliminary exam.",
+      "category": "Bank Exams",
+      "timeLimit": 18,
+      "totalMarks": 40,
+      "difficulty": "Medium",
+      "questions": [
+        {
+          "id": "ibps_po_q1",
+          "text": "If the cost price of an item is ₹450 and it is sold at a profit of 20%, what is the selling price (in ₹)?",
+          "type": "numerical",
+          "correctAnswer": "540",
+          "explanation": "SP = CP x 1.20 = 450 x 1.2 = 540.",
+          "subject": "Profit & Loss"
+        },
+        {
+          "id": "ibps_po_q2",
+          "text": "Pointing to a photograph, a man says, 'She is the daughter of my grandfather's only son.' How is the woman related to the man?",
+          "type": "single",
+          "options": [
+            "Sister",
+            "Mother",
+            "Cousin",
+            "Aunt"
+          ],
+          "correctAnswer": "0",
+          "explanation": "The grandfather's only son is the man's father, so the daughter is the man's sister.",
+          "subject": "Blood Relations"
+        },
+        {
+          "id": "ibps_po_q3",
+          "text": "The headquarters of the Reserve Bank of India is located in:",
+          "type": "single",
+          "options": [
+            "New Delhi",
+            "Kolkata",
+            "Mumbai",
+            "Chennai"
+          ],
+          "correctAnswer": "2",
+          "explanation": "The Reserve Bank of India is headquartered in Mumbai.",
+          "subject": "Banking Awareness"
+        },
+        {
+          "id": "ibps_po_q4",
+          "text": "A sum of ₹8,000 amounts to ₹9,800 in 3 years at simple interest. What is the rate of interest per annum (in %)?",
+          "type": "numerical",
+          "correctAnswer": "7.5",
+          "explanation": "SI = 9800 - 8000 = 1800. Rate = (SI x 100)/(P x T) = (1800 x 100)/(8000 x 3) = 7.5%.",
+          "subject": "Simple Interest"
+        },
+        {
+          "id": "ibps_po_q5",
+          "text": "In a certain code language, 'SUN' is written as 'TVO'. How is 'MOON' written in that code?",
+          "type": "single",
+          "options": [
+            "NPPO",
+            "MPPO",
+            "NPPN",
+            "OPPO"
+          ],
+          "correctAnswer": "0",
+          "explanation": "Each letter is shifted forward by one place: M→N, O→P, O→P, N→O, giving NPPO.",
+          "subject": "Coding-Decoding"
+        },
+        {
+          "id": "ibps_po_q6",
+          "text": "The average of 5 consecutive odd numbers is 51. What is the largest number among them?",
+          "type": "numerical",
+          "correctAnswer": "55",
+          "explanation": "For 5 consecutive odd numbers, the average equals the middle number, so the middle term is 51. The numbers are 47, 49, 51, 53, 55, so the largest is 55.",
+          "subject": "Averages"
+        },
+        {
+          "id": "ibps_po_q7",
+          "text": "Which committee's recommendations led to the licensing framework for India's Small Finance Banks and Payments Banks?",
+          "type": "single",
+          "options": [
+            "Nachiket Mor Committee",
+            "Narasimham Committee",
+            "Raghuram Rajan Committee",
+            "Bimal Jalan Committee"
+          ],
+          "correctAnswer": "0",
+          "explanation": "The Nachiket Mor Committee (2013-14) on Comprehensive Financial Services recommended differentiated bank licenses, leading to the creation of Small Finance Banks and Payments Banks.",
+          "subject": "Banking Awareness"
+        },
+        {
+          "id": "ibps_po_q8",
+          "text": "What does 'NEFT' stand for in the Indian banking system?",
+          "type": "single",
+          "options": [
+            "National Electronic Funds Transfer",
+            "National Efficient Fund Transfer",
+            "Net Electronic Funds Transaction",
+            "National Electronic Finance Transfer"
+          ],
+          "correctAnswer": "0",
+          "explanation": "NEFT stands for National Electronic Funds Transfer, an electronic payment system for transferring funds between bank accounts in India.",
+          "subject": "Banking Awareness"
+        },
+        {
+          "id": "ibps_po_q9",
+          "text": "Which of the following statements about the Repo Rate are correct? (Select all that apply)",
+          "type": "multiple",
+          "options": [
+            "It is the rate at which RBI lends money to commercial banks",
+            "An increase in repo rate generally makes loans costlier",
+            "It is decided by the Monetary Policy Committee (MPC)",
+            "It is the rate at which banks lend money to RBI"
+          ],
+          "correctAnswer": "0,1,2",
+          "explanation": "Repo rate is the rate at which RBI lends to commercial banks, set by the MPC; raising it makes borrowing costlier. The rate at which banks lend to RBI is called the reverse repo rate, not the repo rate.",
+          "subject": "Banking Awareness"
+        },
+        {
+          "id": "ibps_po_q10",
+          "text": "Complete the number series: 2, 6, 12, 20, 30, ?",
+          "type": "single",
+          "options": [
+            "40",
+            "42",
+            "44",
+            "36"
+          ],
+          "correctAnswer": "1",
+          "explanation": "The differences between consecutive terms increase by 2 each time (4,6,8,10,12), so the next term is 30 + 12 = 42.",
+          "subject": "Number Series"
+        }
+      ]
+    },
+    {
+      "id": "ibps-clerk",
+      "title": "IBPS Clerk Prelims Practice Set",
+      "description": "Quant and reasoning practice aligned with the IBPS Clerk Preliminary exam pattern.",
+      "category": "Bank Exams",
+      "timeLimit": 10,
+      "totalMarks": 12,
+      "difficulty": "Easy",
+      "questions": [
+        {
+          "id": "ibps_clerk_q1",
+          "text": "The average of five consecutive even numbers is 24. What is the largest number among them?",
+          "type": "numerical",
+          "correctAnswer": "28",
+          "explanation": "Numbers: 20,22,24,26,28 — average is 24, largest is 28.",
+          "subject": "Averages"
+        },
+        {
+          "id": "ibps_clerk_q2",
+          "text": "Complete the analogy: Doctor : Hospital :: Teacher : ?",
+          "type": "single",
+          "options": [
+            "Clinic",
+            "School",
+            "Court",
+            "Office"
+          ],
+          "correctAnswer": "1",
+          "explanation": "A doctor works in a hospital just as a teacher works in a school.",
+          "subject": "Analogy"
+        },
+        {
+          "id": "ibps_clerk_q3",
+          "text": "'UPI' in digital banking stands for:",
+          "type": "single",
+          "options": [
+            "Unified Payments Interface",
+            "United Payment Institution",
+            "Universal Payment Index",
+            "Unified Public Interface"
+          ],
+          "correctAnswer": "0",
+          "explanation": "UPI stands for Unified Payments Interface, enabling instant fund transfers in India.",
+          "subject": "Banking Awareness"
+        }
+      ]
+    },
+    {
+      "id": "sbi-po",
+      "title": "SBI PO Prelims Practice Set",
+      "description": "Practice set covering quantitative aptitude, reasoning, and banking awareness for SBI PO aspirants.",
+      "category": "Bank Exams",
+      "timeLimit": 10,
+      "totalMarks": 12,
+      "difficulty": "Hard",
+      "questions": [
+        {
+          "id": "sbi_po_q1",
+          "text": "A sum of ₹5,000 amounts to ₹5,800 in 2 years at simple interest. What is the rate of interest per annum (in %)?",
+          "type": "numerical",
+          "correctAnswer": "8",
+          "explanation": "SI=800. Rate = (SI x 100)/(P x T) = (800x100)/(5000x2) = 8%.",
+          "subject": "Simple Interest"
+        },
+        {
+          "id": "sbi_po_q2",
+          "text": "In a certain code, 'BOOK' is written as 'CPPL'. How is 'PAGE' written in that code?",
+          "type": "single",
+          "options": [
+            "QBHF",
+            "QBGF",
+            "PBHF",
+            "QAHF"
+          ],
+          "correctAnswer": "0",
+          "explanation": "Each letter is shifted forward by one place: P→Q, A→B, G→H, E→F, giving QBHF.",
+          "subject": "Coding-Decoding"
+        },
+        {
+          "id": "sbi_po_q3",
+          "text": "Which committee recommended the establishment of Regional Rural Banks (RRBs) in India?",
+          "type": "single",
+          "options": [
+            "Narasimham Committee",
+            "Kelkar Committee",
+            "Sivaraman Committee",
+            "Chakravarty Committee"
+          ],
+          "correctAnswer": "2",
+          "explanation": "The Sivaraman Committee (1975) recommended setting up Regional Rural Banks.",
+          "subject": "Banking Awareness"
+        }
+      ]
+    },
+    {
+      "id": "sbi-clerk",
+      "title": "SBI Clerk Prelims Practice Set",
+      "description": "Foundational quant and reasoning questions in the SBI Clerk exam pattern.",
+      "category": "Bank Exams",
+      "timeLimit": 10,
+      "totalMarks": 12,
+      "difficulty": "Easy",
+      "questions": [
+        {
+          "id": "sbi_clerk_q1",
+          "text": "What is 15% of 340?",
+          "type": "numerical",
+          "correctAnswer": "51",
+          "explanation": "15% of 340 = 0.15 x 340 = 51.",
+          "subject": "Percentage"
+        },
+        {
+          "id": "sbi_clerk_q2",
+          "text": "Which number will replace the question mark? 5, 10, 20, 40, ?",
+          "type": "single",
+          "options": [
+            "60",
+            "70",
+            "80",
+            "90"
+          ],
+          "correctAnswer": "2",
+          "explanation": "Each number is double the previous one: 40x2=80.",
+          "subject": "Number Series"
+        },
+        {
+          "id": "sbi_clerk_q3",
+          "text": "NABARD stands for:",
+          "type": "single",
+          "options": [
+            "National Bank for Agriculture and Rural Development",
+            "National Board for Agricultural Research and Development",
+            "National Association for Banking and Rural Development",
+            "None of these"
+          ],
+          "correctAnswer": "0",
+          "explanation": "NABARD is the National Bank for Agriculture and Rural Development.",
+          "subject": "Banking Awareness"
+        }
+      ]
+    },
+    {
+      "id": "rbi-assistant",
+      "title": "RBI Assistant Practice Set",
+      "description": "Practice questions covering quant, reasoning, and RBI-related banking awareness.",
+      "category": "Bank Exams",
+      "timeLimit": 10,
+      "totalMarks": 12,
+      "difficulty": "Medium",
+      "questions": [
+        {
+          "id": "rbi_assistant_q1",
+          "text": "Two pipes can fill a tank in 20 and 30 minutes respectively. How long will both pipes take to fill the tank together (in minutes)?",
+          "type": "numerical",
+          "correctAnswer": "12",
+          "explanation": "Combined rate = 1/20+1/30 = 1/12, so time = 12 minutes.",
+          "subject": "Time & Work"
+        },
+        {
+          "id": "rbi_assistant_q2",
+          "text": "NABARD stands for:",
+          "type": "single",
+          "options": [
+            "National Bank for Agriculture and Rural Development",
+            "National Board for Agricultural Research and Development",
+            "National Association for Banking and Rural Development",
+            "None of these"
+          ],
+          "correctAnswer": "0",
+          "explanation": "NABARD is the National Bank for Agriculture and Rural Development.",
+          "subject": "Banking Awareness"
+        },
+        {
+          "id": "rbi_assistant_q3",
+          "text": "If South-East becomes North, North-East becomes West, what does South become?",
+          "type": "single",
+          "options": [
+            "North-West",
+            "East",
+            "South-West",
+            "North-East"
+          ],
+          "correctAnswer": "0",
+          "explanation": "Each direction is rotated 135° anticlockwise; South maps to North-West.",
+          "subject": "Direction Sense"
+        }
+      ]
+    },
+    {
+      "id": "rbi-gradeb",
+      "title": "RBI Grade B Practice Set",
+      "description": "Higher-difficulty quant and banking awareness questions for RBI Grade B officer aspirants.",
+      "category": "Bank Exams",
+      "timeLimit": 10,
+      "totalMarks": 12,
+      "difficulty": "Hard",
+      "questions": [
+        {
+          "id": "rbi_gradeb_q1",
+          "text": "NABARD stands for:",
+          "type": "single",
+          "options": [
+            "National Bank for Agriculture and Rural Development",
+            "National Board for Agricultural Research and Development",
+            "National Association for Banking and Rural Development",
+            "None of these"
+          ],
+          "correctAnswer": "0",
+          "explanation": "NABARD is the National Bank for Agriculture and Rural Development.",
+          "subject": "Banking Awareness"
+        },
+        {
+          "id": "rbi_gradeb_q2",
+          "text": "The perimeter of a square is 64 cm. What is its area (in sq. cm)?",
+          "type": "numerical",
+          "correctAnswer": "256",
+          "explanation": "Side = 64/4 = 16 cm. Area = 16x16 = 256 sq cm.",
+          "subject": "Mensuration"
+        },
+        {
+          "id": "rbi_gradeb_q3",
+          "text": "A is the brother of B. C is the mother of A. D is the father of C. How is B related to D?",
+          "type": "single",
+          "options": [
+            "Grandson/Granddaughter",
+            "Son",
+            "Daughter",
+            "Nephew"
+          ],
+          "correctAnswer": "0",
+          "explanation": "C is A's mother, so C is also B's mother; D is C's father, making D the grandfather of both A and B.",
+          "subject": "Blood Relations"
+        }
+      ]
+    },
+    {
+      "id": "nabard-gradea",
+      "title": "NABARD Grade A Practice Set",
+      "description": "Practice set on banking awareness, quant, and reasoning for NABARD Grade A aspirants.",
+      "category": "Bank Exams",
+      "timeLimit": 10,
+      "totalMarks": 12,
+      "difficulty": "Hard",
+      "questions": [
+        {
+          "id": "nabard_gradea_q1",
+          "text": "The headquarters of the Reserve Bank of India is located in:",
+          "type": "single",
+          "options": [
+            "New Delhi",
+            "Kolkata",
+            "Mumbai",
+            "Chennai"
+          ],
+          "correctAnswer": "2",
+          "explanation": "The Reserve Bank of India is headquartered in Mumbai.",
+          "subject": "Banking Awareness"
+        },
+        {
+          "id": "nabard_gradea_q2",
+          "text": "The LCM of 12 and 18 is:",
+          "type": "numerical",
+          "correctAnswer": "36",
+          "explanation": "Multiples: 12x3=36, 18x2=36, so LCM = 36.",
+          "subject": "Number System"
+        },
+        {
+          "id": "nabard_gradea_q3",
+          "text": "The Battle of Plassey was fought in the year:",
+          "type": "single",
+          "options": [
+            "1757",
+            "1764",
+            "1857",
+            "1707"
+          ],
+          "correctAnswer": "0",
+          "explanation": "The Battle of Plassey, fought in 1757, marked the beginning of British political control in India.",
+          "subject": "Modern Indian History"
+        }
+      ]
+    },
+    {
+      "id": "lic-aao",
+      "title": "LIC AAO Practice Set",
+      "description": "Quantitative aptitude and reasoning questions in the LIC AAO exam pattern.",
+      "category": "Insurance Exams",
+      "timeLimit": 10,
+      "totalMarks": 12,
+      "difficulty": "Medium",
+      "questions": [
+        {
+          "id": "lic_aao_q1",
+          "text": "The LCM of 12 and 18 is:",
+          "type": "numerical",
+          "correctAnswer": "36",
+          "explanation": "Multiples: 12x3=36, 18x2=36, so LCM = 36.",
+          "subject": "Number System"
+        },
+        {
+          "id": "lic_aao_q2",
+          "text": "Find the odd one out.",
+          "type": "single",
+          "options": [
+            "Apple",
+            "Mango",
+            "Potato",
+            "Banana"
+          ],
+          "correctAnswer": "2",
+          "explanation": "Potato is a vegetable while the other three are fruits.",
+          "subject": "Classification"
+        },
+        {
+          "id": "lic_aao_q3",
+          "text": "Which is the smallest state in India by area?",
+          "type": "single",
+          "options": [
+            "Sikkim",
+            "Goa",
+            "Tripura",
+            "Nagaland"
+          ],
+          "correctAnswer": "1",
+          "explanation": "Goa is the smallest Indian state by geographical area.",
+          "subject": "Indian Geography"
+        }
+      ]
+    },
+    {
+      "id": "lic-ado",
+      "title": "LIC ADO Practice Set",
+      "description": "Foundational reasoning and GK practice for LIC ADO aspirants.",
+      "category": "Insurance Exams",
+      "timeLimit": 10,
+      "totalMarks": 12,
+      "difficulty": "Easy",
+      "questions": [
+        {
+          "id": "lic_ado_q1",
+          "text": "Find the odd one out.",
+          "type": "single",
+          "options": [
+            "Apple",
+            "Mango",
+            "Potato",
+            "Banana"
+          ],
+          "correctAnswer": "2",
+          "explanation": "Potato is a vegetable while the other three are fruits.",
+          "subject": "Classification"
+        },
+        {
+          "id": "lic_ado_q2",
+          "text": "Which is the smallest state in India by area?",
+          "type": "single",
+          "options": [
+            "Sikkim",
+            "Goa",
+            "Tripura",
+            "Nagaland"
+          ],
+          "correctAnswer": "1",
+          "explanation": "Goa is the smallest Indian state by geographical area.",
+          "subject": "Indian Geography"
+        },
+        {
+          "id": "lic_ado_q3",
+          "text": "The ratio of two numbers is 3:4 and their sum is 63. What is the smaller number?",
+          "type": "numerical",
+          "correctAnswer": "27",
+          "explanation": "3x+4x=63 → x=9, smaller number = 3x9=27.",
+          "subject": "Ratio & Proportion"
+        }
+      ]
+    },
+    {
+      "id": "nicl-ao",
+      "title": "NICL AO Practice Set",
+      "description": "Practice questions on reasoning, quant, and general awareness for insurance sector exams.",
+      "category": "Insurance Exams",
+      "timeLimit": 10,
+      "totalMarks": 12,
+      "difficulty": "Medium",
+      "questions": [
+        {
+          "id": "nicl_ao_q1",
+          "text": "Pointing to a photograph, a man says, 'She is the daughter of my grandfather's only son.' How is the woman related to the man?",
+          "type": "single",
+          "options": [
+            "Sister",
+            "Mother",
+            "Cousin",
+            "Aunt"
+          ],
+          "correctAnswer": "0",
+          "explanation": "The grandfather's only son is the man's father, so the daughter is the man's sister.",
+          "subject": "Blood Relations"
+        },
+        {
+          "id": "nicl_ao_q2",
+          "text": "The ratio of two numbers is 3:4 and their sum is 63. What is the smaller number?",
+          "type": "numerical",
+          "correctAnswer": "27",
+          "explanation": "3x+4x=63 → x=9, smaller number = 3x9=27.",
+          "subject": "Ratio & Proportion"
+        },
+        {
+          "id": "nicl_ao_q3",
+          "text": "Which Article of the Indian Constitution abolishes untouchability?",
+          "type": "single",
+          "options": [
+            "Article 15",
+            "Article 17",
+            "Article 21",
+            "Article 32"
+          ],
+          "correctAnswer": "1",
+          "explanation": "Article 17 of the Indian Constitution abolishes untouchability in any form.",
+          "subject": "Indian Polity"
+        }
+      ]
+    },
+    {
+      "id": "ssc-cgl-tier1",
+      "title": "SSC CGL Tier 1 Practice Set",
+      "description": "Quantitative aptitude, reasoning, English, and general awareness in the SSC CGL Tier 1 pattern.",
+      "category": "SSC Exams",
+      "timeLimit": 18,
+      "totalMarks": 40,
+      "difficulty": "Medium",
+      "questions": [
+        {
+          "id": "ssc_cgl_tier1_q1",
+          "text": "The ratio of two numbers is 3:4 and their sum is 63. What is the smaller number?",
+          "type": "numerical",
+          "correctAnswer": "27",
+          "explanation": "3x+4x=63 → x=9, smaller number = 3x9=27.",
+          "subject": "Ratio & Proportion"
+        },
+        {
+          "id": "ssc_cgl_tier1_q2",
+          "text": "In a certain code, 'BOOK' is written as 'CPPL'. How is 'PAGE' written in that code?",
+          "type": "single",
+          "options": [
+            "QBHF",
+            "QBGF",
+            "PBHF",
+            "QAHF"
+          ],
+          "correctAnswer": "0",
+          "explanation": "Each letter is shifted forward by one place: P→Q, A→B, G→H, E→F, giving QBHF.",
+          "subject": "Coding-Decoding"
+        },
+        {
+          "id": "ssc_cgl_tier1_q3",
+          "text": "Who was the first President of independent India?",
+          "type": "single",
+          "options": [
+            "Dr. Rajendra Prasad",
+            "Jawaharlal Nehru",
+            "Dr. S. Radhakrishnan",
+            "Zakir Hussain"
+          ],
+          "correctAnswer": "0",
+          "explanation": "Dr. Rajendra Prasad served as the first President of India from 1950 to 1962.",
+          "subject": "Static GK"
+        },
+        {
+          "id": "ssc_cgl_tier1_q4",
+          "text": "A train 150 m long crosses a pole in 10 seconds. What is the speed of the train in km/h?",
+          "type": "numerical",
+          "correctAnswer": "54",
+          "explanation": "Speed = distance/time = 150/10 = 15 m/s. Converting to km/h: 15 x 18/5 = 54 km/h.",
+          "subject": "Time, Speed & Distance"
+        },
+        {
+          "id": "ssc_cgl_tier1_q5",
+          "text": "Who is popularly known as the 'Missile Man of India'?",
+          "type": "single",
+          "options": [
+            "Homi J. Bhabha",
+            "A.P.J. Abdul Kalam",
+            "Vikram Sarabhai",
+            "C.V. Raman"
+          ],
+          "correctAnswer": "1",
+          "explanation": "Dr. A.P.J. Abdul Kalam, who later became the 11th President of India, is known as the 'Missile Man of India' for his contributions to missile and space technology.",
+          "subject": "Static GK"
+        },
+        {
+          "id": "ssc_cgl_tier1_q6",
+          "text": "The Battle of Plassey, which laid the foundation of British rule in India, was fought in the year:",
+          "type": "single",
+          "options": [
+            "1757",
+            "1764",
+            "1857",
+            "1770"
+          ],
+          "correctAnswer": "0",
+          "explanation": "The Battle of Plassey was fought in 1757 between the British East India Company under Robert Clive and Siraj-ud-Daulah, the Nawab of Bengal.",
+          "subject": "Modern Indian History"
+        },
+        {
+          "id": "ssc_cgl_tier1_q7",
+          "text": "Find the value of: 25% of 480 + 10% of 250",
+          "type": "numerical",
+          "correctAnswer": "145",
+          "explanation": "25% of 480 = 120, and 10% of 250 = 25. Sum = 120 + 25 = 145.",
+          "subject": "Percentage"
+        },
+        {
+          "id": "ssc_cgl_tier1_q8",
+          "text": "Which Indian state has the longest coastline?",
+          "type": "single",
+          "options": [
+            "Tamil Nadu",
+            "Andhra Pradesh",
+            "Gujarat",
+            "Kerala"
+          ],
+          "correctAnswer": "2",
+          "explanation": "Gujarat has India's longest coastline among states, at roughly 1,600 km.",
+          "subject": "Indian Geography"
+        },
+        {
+          "id": "ssc_cgl_tier1_q9",
+          "text": "Choose the correctly spelled word:",
+          "type": "single",
+          "options": [
+            "Recieve",
+            "Receive",
+            "Receeve",
+            "Receve"
+          ],
+          "correctAnswer": "1",
+          "explanation": "The correct spelling follows the rule 'i before e except after c' — 'Receive' is correct since it comes after 'c'.",
+          "subject": "English Spelling"
+        },
+        {
+          "id": "ssc_cgl_tier1_q10",
+          "text": "Which of the following are classical dance forms of India? (Select all that apply)",
+          "type": "multiple",
+          "options": [
+            "Bharatanatyam",
+            "Kathak",
+            "Salsa",
+            "Odissi"
+          ],
+          "correctAnswer": "0,1,3",
+          "explanation": "Bharatanatyam, Kathak, and Odissi are among India's recognized classical dance forms; Salsa is a Latin American social dance, not Indian classical.",
+          "subject": "Indian Culture"
+        }
+      ]
+    },
+    {
+      "id": "ssc-chsl",
+      "title": "SSC CHSL Practice Set",
+      "description": "Practice set on quant, English, and general awareness for SSC CHSL aspirants.",
+      "category": "SSC Exams",
+      "timeLimit": 10,
+      "totalMarks": 12,
+      "difficulty": "Easy",
+      "questions": [
+        {
+          "id": "ssc_chsl_q1",
+          "text": "A man buys an article for ₹800 and sells it at a loss of 15%. What is the selling price (in ₹)?",
+          "type": "numerical",
+          "correctAnswer": "680",
+          "explanation": "SP = 800 x 0.85 = 680.",
+          "subject": "Profit & Loss"
+        },
+        {
+          "id": "ssc_chsl_q2",
+          "text": "Choose the word opposite in meaning to 'ABUNDANT':",
+          "type": "single",
+          "options": [
+            "Plentiful",
+            "Scarce",
+            "Ample",
+            "Copious"
+          ],
+          "correctAnswer": "1",
+          "explanation": "'Scarce' means insufficient or rare, the opposite of 'abundant'.",
+          "subject": "English Vocabulary"
+        },
+        {
+          "id": "ssc_chsl_q3",
+          "text": "The Sun Temple at Konark is located in which state?",
+          "type": "single",
+          "options": [
+            "Odisha",
+            "Tamil Nadu",
+            "Gujarat",
+            "Rajasthan"
+          ],
+          "correctAnswer": "0",
+          "explanation": "The Konark Sun Temple, a UNESCO World Heritage Site, is located in Odisha.",
+          "subject": "Static GK"
+        }
+      ]
+    },
+    {
+      "id": "ssc-mts",
+      "title": "SSC MTS Practice Set",
+      "description": "Basic-level quant and general awareness questions for SSC MTS aspirants.",
+      "category": "SSC Exams",
+      "timeLimit": 10,
+      "totalMarks": 12,
+      "difficulty": "Easy",
+      "questions": [
+        {
+          "id": "ssc_mts_q1",
+          "text": "If the cost price of an item is ₹450 and it is sold at a profit of 20%, what is the selling price (in ₹)?",
+          "type": "numerical",
+          "correctAnswer": "540",
+          "explanation": "SP = CP x 1.20 = 450 x 1.2 = 540.",
+          "subject": "Profit & Loss"
+        },
+        {
+          "id": "ssc_mts_q2",
+          "text": "The Sun Temple at Konark is located in which state?",
+          "type": "single",
+          "options": [
+            "Odisha",
+            "Tamil Nadu",
+            "Gujarat",
+            "Rajasthan"
+          ],
+          "correctAnswer": "0",
+          "explanation": "The Konark Sun Temple, a UNESCO World Heritage Site, is located in Odisha.",
+          "subject": "Static GK"
+        },
+        {
+          "id": "ssc_mts_q3",
+          "text": "Complete the analogy: Doctor : Hospital :: Teacher : ?",
+          "type": "single",
+          "options": [
+            "Clinic",
+            "School",
+            "Court",
+            "Office"
+          ],
+          "correctAnswer": "1",
+          "explanation": "A doctor works in a hospital just as a teacher works in a school.",
+          "subject": "Analogy"
+        }
+      ]
+    },
+    {
+      "id": "ssc-gd",
+      "title": "SSC GD Constable Practice Set",
+      "description": "General knowledge, reasoning, and basic quant for SSC GD Constable aspirants.",
+      "category": "SSC Exams",
+      "timeLimit": 10,
+      "totalMarks": 12,
+      "difficulty": "Easy",
+      "questions": [
+        {
+          "id": "ssc_gd_q1",
+          "text": "The Sun Temple at Konark is located in which state?",
+          "type": "single",
+          "options": [
+            "Odisha",
+            "Tamil Nadu",
+            "Gujarat",
+            "Rajasthan"
+          ],
+          "correctAnswer": "0",
+          "explanation": "The Konark Sun Temple, a UNESCO World Heritage Site, is located in Odisha.",
+          "subject": "Static GK"
+        },
+        {
+          "id": "ssc_gd_q2",
+          "text": "Complete the analogy: Doctor : Hospital :: Teacher : ?",
+          "type": "single",
+          "options": [
+            "Clinic",
+            "School",
+            "Court",
+            "Office"
+          ],
+          "correctAnswer": "1",
+          "explanation": "A doctor works in a hospital just as a teacher works in a school.",
+          "subject": "Analogy"
+        },
+        {
+          "id": "ssc_gd_q3",
+          "text": "What is 15% of 340?",
+          "type": "numerical",
+          "correctAnswer": "51",
+          "explanation": "15% of 340 = 0.15 x 340 = 51.",
+          "subject": "Percentage"
+        }
+      ]
+    },
+    {
+      "id": "ssc-steno",
+      "title": "SSC Stenographer Practice Set",
+      "description": "English language and general awareness practice for SSC Stenographer aspirants.",
+      "category": "SSC Exams",
+      "timeLimit": 10,
+      "totalMarks": 12,
+      "difficulty": "Medium",
+      "questions": [
+        {
+          "id": "ssc_steno_q1",
+          "text": "Choose the word opposite in meaning to 'ABUNDANT':",
+          "type": "single",
+          "options": [
+            "Plentiful",
+            "Scarce",
+            "Ample",
+            "Copious"
+          ],
+          "correctAnswer": "1",
+          "explanation": "'Scarce' means insufficient or rare, the opposite of 'abundant'.",
+          "subject": "English Vocabulary"
+        },
+        {
+          "id": "ssc_steno_q2",
+          "text": "The Jallianwala Bagh massacre took place in the year:",
+          "type": "single",
+          "options": [
+            "1917",
+            "1919",
+            "1921",
+            "1923"
+          ],
+          "correctAnswer": "1",
+          "explanation": "The Jallianwala Bagh massacre occurred on 13 April 1919 in Amritsar.",
+          "subject": "Modern Indian History"
+        },
+        {
+          "id": "ssc_steno_q3",
+          "text": "Which number will replace the question mark? 5, 10, 20, 40, ?",
+          "type": "single",
+          "options": [
+            "60",
+            "70",
+            "80",
+            "90"
+          ],
+          "correctAnswer": "2",
+          "explanation": "Each number is double the previous one: 40x2=80.",
+          "subject": "Number Series"
+        }
+      ]
+    },
+    {
+      "id": "ssc-je",
+      "title": "SSC JE (Civil) Practice Set",
+      "description": "General awareness and reasoning practice for SSC Junior Engineer aspirants.",
+      "category": "SSC Exams",
+      "timeLimit": 10,
+      "totalMarks": 12,
+      "difficulty": "Hard",
+      "questions": [
+        {
+          "id": "ssc_je_q1",
+          "text": "The Jallianwala Bagh massacre took place in the year:",
+          "type": "single",
+          "options": [
+            "1917",
+            "1919",
+            "1921",
+            "1923"
+          ],
+          "correctAnswer": "1",
+          "explanation": "The Jallianwala Bagh massacre occurred on 13 April 1919 in Amritsar.",
+          "subject": "Modern Indian History"
+        },
+        {
+          "id": "ssc_je_q2",
+          "text": "Which number will replace the question mark? 5, 10, 20, 40, ?",
+          "type": "single",
+          "options": [
+            "60",
+            "70",
+            "80",
+            "90"
+          ],
+          "correctAnswer": "2",
+          "explanation": "Each number is double the previous one: 40x2=80.",
+          "subject": "Number Series"
+        },
+        {
+          "id": "ssc_je_q3",
+          "text": "The SI unit of force is:",
+          "type": "single",
+          "options": [
+            "Joule",
+            "Newton",
+            "Pascal",
+            "Watt"
+          ],
+          "correctAnswer": "1",
+          "explanation": "The SI unit of force is the Newton (N).",
+          "subject": "Physics"
+        }
+      ]
+    },
+    {
+      "id": "rrb-ntpc",
+      "title": "RRB NTPC CBT-1 Practice Set",
+      "description": "Mathematics, reasoning, and general awareness in the RRB NTPC CBT-1 pattern.",
+      "category": "Railway Exams",
+      "timeLimit": 10,
+      "totalMarks": 12,
+      "difficulty": "Medium",
+      "questions": [
+        {
+          "id": "rrb_ntpc_q1",
+          "text": "If the cost price of an item is ₹450 and it is sold at a profit of 20%, what is the selling price (in ₹)?",
+          "type": "numerical",
+          "correctAnswer": "540",
+          "explanation": "SP = CP x 1.20 = 450 x 1.2 = 540.",
+          "subject": "Profit & Loss"
+        },
+        {
+          "id": "rrb_ntpc_q2",
+          "text": "Statements: All pens are pencils. All pencils are erasers. Conclusion: All pens are erasers. Is the conclusion valid?",
+          "type": "single",
+          "options": [
+            "Valid",
+            "Invalid",
+            "Cannot be determined",
+            "None of these"
+          ],
+          "correctAnswer": "0",
+          "explanation": "Since all pens are pencils and all pencils are erasers, it logically follows that all pens are erasers.",
+          "subject": "Syllogism"
+        },
+        {
+          "id": "rrb_ntpc_q3",
+          "text": "Which river is popularly known as the 'Sorrow of Bihar'?",
+          "type": "single",
+          "options": [
+            "Ganga",
+            "Kosi",
+            "Son",
+            "Gandak"
+          ],
+          "correctAnswer": "1",
+          "explanation": "The Kosi river is known as the 'Sorrow of Bihar' due to its frequent and devastating floods.",
+          "subject": "Indian Geography"
+        }
+      ]
+    },
+    {
+      "id": "rrb-groupd",
+      "title": "RRB Group D Practice Set",
+      "description": "General science, mathematics, and general awareness for RRB Group D aspirants.",
+      "category": "Railway Exams",
+      "timeLimit": 10,
+      "totalMarks": 12,
+      "difficulty": "Easy",
+      "questions": [
+        {
+          "id": "rrb_groupd_q1",
+          "text": "Photosynthesis primarily occurs in which part of a plant cell?",
+          "type": "single",
+          "options": [
+            "Mitochondria",
+            "Nucleus",
+            "Chloroplast",
+            "Ribosome"
+          ],
+          "correctAnswer": "2",
+          "explanation": "Chloroplasts contain chlorophyll and are the site of photosynthesis in plant cells.",
+          "subject": "Biology"
+        },
+        {
+          "id": "rrb_groupd_q2",
+          "text": "A shopkeeper marks an item 25% above cost price and gives a discount of 10% on the marked price. What is his net profit percentage?",
+          "type": "single",
+          "options": [
+            "12.5%",
+            "15%",
+            "10%",
+            "20%"
+          ],
+          "correctAnswer": "0",
+          "explanation": "Net price = 1.25 x 0.90 = 1.125 of CP, i.e. 12.5% profit.",
+          "subject": "Profit & Loss"
+        },
+        {
+          "id": "rrb_groupd_q3",
+          "text": "Chandrayaan-3 successfully landed near the south pole of the Moon in which year?",
+          "type": "single",
+          "options": [
+            "2021",
+            "2022",
+            "2023",
+            "2024"
+          ],
+          "correctAnswer": "2",
+          "explanation": "Chandrayaan-3 made a successful soft landing near the Moon's south pole in August 2023.",
+          "subject": "Current Affairs"
+        }
+      ]
+    },
+    {
+      "id": "rrb-alp",
+      "title": "RRB ALP Practice Set",
+      "description": "Mathematics and general science practice for RRB Assistant Loco Pilot aspirants.",
+      "category": "Railway Exams",
+      "timeLimit": 10,
+      "totalMarks": 12,
+      "difficulty": "Medium",
+      "questions": [
+        {
+          "id": "rrb_alp_q1",
+          "text": "A shopkeeper marks an item 25% above cost price and gives a discount of 10% on the marked price. What is his net profit percentage?",
+          "type": "single",
+          "options": [
+            "12.5%",
+            "15%",
+            "10%",
+            "20%"
+          ],
+          "correctAnswer": "0",
+          "explanation": "Net price = 1.25 x 0.90 = 1.125 of CP, i.e. 12.5% profit.",
+          "subject": "Profit & Loss"
+        },
+        {
+          "id": "rrb_alp_q2",
+          "text": "Which vitamin is produced by the human body when exposed to sunlight?",
+          "type": "single",
+          "options": [
+            "Vitamin A",
+            "Vitamin B12",
+            "Vitamin C",
+            "Vitamin D"
+          ],
+          "correctAnswer": "3",
+          "explanation": "The human skin synthesizes Vitamin D upon exposure to sunlight.",
+          "subject": "Biology"
+        },
+        {
+          "id": "rrb_alp_q3",
+          "text": "A is the brother of B. C is the mother of A. D is the father of C. How is B related to D?",
+          "type": "single",
+          "options": [
+            "Grandson/Granddaughter",
+            "Son",
+            "Daughter",
+            "Nephew"
+          ],
+          "correctAnswer": "0",
+          "explanation": "C is A's mother, so C is also B's mother; D is C's father, making D the grandfather of both A and B.",
+          "subject": "Blood Relations"
+        }
+      ]
+    },
+    {
+      "id": "rrb-je",
+      "title": "RRB JE Practice Set",
+      "description": "General awareness and technical-adjacent reasoning for RRB Junior Engineer aspirants.",
+      "category": "Railway Exams",
+      "timeLimit": 10,
+      "totalMarks": 12,
+      "difficulty": "Hard",
+      "questions": [
+        {
+          "id": "rrb_je_q1",
+          "text": "Chandrayaan-3 successfully landed near the south pole of the Moon in which year?",
+          "type": "single",
+          "options": [
+            "2021",
+            "2022",
+            "2023",
+            "2024"
+          ],
+          "correctAnswer": "2",
+          "explanation": "Chandrayaan-3 made a successful soft landing near the Moon's south pole in August 2023.",
+          "subject": "Current Affairs"
+        },
+        {
+          "id": "rrb_je_q2",
+          "text": "The chemical formula of common salt is:",
+          "type": "single",
+          "options": [
+            "NaCl",
+            "KCl",
+            "CaCl2",
+            "NaOH"
+          ],
+          "correctAnswer": "0",
+          "explanation": "Common salt (sodium chloride) has the chemical formula NaCl.",
+          "subject": "Chemistry"
+        },
+        {
+          "id": "rrb_je_q3",
+          "text": "Find the odd one out.",
+          "type": "single",
+          "options": [
+            "Apple",
+            "Mango",
+            "Potato",
+            "Banana"
+          ],
+          "correctAnswer": "2",
+          "explanation": "Potato is a vegetable while the other three are fruits.",
+          "subject": "Classification"
+        }
+      ]
+    },
+    {
+      "id": "rpf-constable",
+      "title": "RPF Constable Practice Set",
+      "description": "General knowledge and reasoning practice for Railway Protection Force Constable aspirants.",
+      "category": "Railway Exams",
+      "timeLimit": 10,
+      "totalMarks": 12,
+      "difficulty": "Easy",
+      "questions": [
+        {
+          "id": "rpf_constable_q1",
+          "text": "Which Indian state has Patna as its capital?",
+          "type": "single",
+          "options": [
+            "Jharkhand",
+            "Bihar",
+            "Uttar Pradesh",
+            "West Bengal"
+          ],
+          "correctAnswer": "1",
+          "explanation": "Patna is the capital city of the state of Bihar.",
+          "subject": "Indian Geography"
+        },
+        {
+          "id": "rpf_constable_q2",
+          "text": "Find the odd one out.",
+          "type": "single",
+          "options": [
+            "Apple",
+            "Mango",
+            "Potato",
+            "Banana"
+          ],
+          "correctAnswer": "2",
+          "explanation": "Potato is a vegetable while the other three are fruits.",
+          "subject": "Classification"
+        },
+        {
+          "id": "rpf_constable_q3",
+          "text": "What is the compound interest on ₹10,000 at 10% per annum for 2 years, compounded annually (in ₹)?",
+          "type": "single",
+          "options": [
+            "₹2,000",
+            "₹2,100",
+            "₹1,000",
+            "₹2,200"
+          ],
+          "correctAnswer": "1",
+          "explanation": "CI = 10000 x (1.1² - 1) = 10000 x 0.21 = ₹2,100.",
+          "subject": "Compound Interest"
+        }
+      ]
+    },
+    {
+      "id": "ctet-paper1",
+      "title": "CTET Paper 1 Practice Set",
+      "description": "Child development, pedagogy, English grammar, and general knowledge practice for CTET Paper 1 aspirants.",
+      "category": "State & Teaching Exams",
+      "timeLimit": 18,
+      "totalMarks": 40,
+      "difficulty": "Medium",
+      "questions": [
+        {
+          "id": "ctet_paper1_q1",
+          "text": "The Sun Temple at Konark is located in which state?",
+          "type": "single",
+          "options": [
+            "Odisha",
+            "Tamil Nadu",
+            "Gujarat",
+            "Rajasthan"
+          ],
+          "correctAnswer": "0",
+          "explanation": "The Konark Sun Temple, a UNESCO World Heritage Site, is located in Odisha.",
+          "subject": "Static GK"
+        },
+        {
+          "id": "ctet_paper1_q2",
+          "text": "If South-East becomes North, North-East becomes West, what does South become?",
+          "type": "single",
+          "options": [
+            "North-West",
+            "East",
+            "South-West",
+            "North-East"
+          ],
+          "correctAnswer": "0",
+          "explanation": "Each direction is rotated 135° anticlockwise; South maps to North-West.",
+          "subject": "Direction Sense"
+        },
+        {
+          "id": "ctet_paper1_q3",
+          "text": "Fill in the blank: She has been working here ___ 2015.",
+          "type": "single",
+          "options": [
+            "since",
+            "for",
+            "from",
+            "at"
+          ],
+          "correctAnswer": "0",
+          "explanation": "'Since' is used with a specific point in time (2015).",
+          "subject": "English Grammar"
+        },
+        {
+          "id": "ctet_paper1_q4",
+          "text": "According to Piaget's theory of cognitive development, a child in the 'concrete operational stage' (approx. 7–11 years) is primarily able to:",
+          "type": "single",
+          "options": [
+            "Think abstractly about purely hypothetical situations",
+            "Perform logical operations on concrete objects and events",
+            "Understand object permanence for the very first time",
+            "Only display reflexive, instinctive behaviour"
+          ],
+          "correctAnswer": "1",
+          "explanation": "Piaget's concrete operational stage is marked by logical thinking about tangible, concrete objects and events; abstract hypothetical reasoning develops later in the formal operational stage.",
+          "subject": "Child Development & Pedagogy"
+        },
+        {
+          "id": "ctet_paper1_q5",
+          "text": "Which of the following best reflects a 'constructivist' approach to teaching?",
+          "type": "single",
+          "options": [
+            "The teacher lectures and students memorize facts by rote",
+            "Students actively construct knowledge through experience, exploration, and prior understanding",
+            "Learning is measured only through standardized written tests",
+            "Students are penalized for wrong answers to enforce correct ones"
+          ],
+          "correctAnswer": "1",
+          "explanation": "Constructivism, associated with Piaget and Vygotsky, holds that learners actively build knowledge through experience rather than passively receiving it from the teacher.",
+          "subject": "Child Development & Pedagogy"
+        },
+        {
+          "id": "ctet_paper1_q6",
+          "text": "The concept of the 'Zone of Proximal Development (ZPD)' was proposed by:",
+          "type": "single",
+          "options": [
+            "Jean Piaget",
+            "Lev Vygotsky",
+            "B.F. Skinner",
+            "Ivan Pavlov"
+          ],
+          "correctAnswer": "1",
+          "explanation": "Lev Vygotsky introduced the Zone of Proximal Development — the gap between what a learner can do alone and what they can do with guidance.",
+          "subject": "Child Development & Pedagogy"
+        },
+        {
+          "id": "ctet_paper1_q7",
+          "text": "In a class, the ratio of boys to girls is 5:4. If there are 20 boys, how many girls are there?",
+          "type": "numerical",
+          "correctAnswer": "16",
+          "explanation": "5x = 20 → x = 4, so the number of girls = 4x = 16.",
+          "subject": "Reasoning & Numerical Ability"
+        },
+        {
+          "id": "ctet_paper1_q8",
+          "text": "Choose the correct passive voice of: 'She is writing a letter.'",
+          "type": "single",
+          "options": [
+            "A letter is written by her",
+            "A letter is being written by her",
+            "A letter was written by her",
+            "A letter has been written by her"
+          ],
+          "correctAnswer": "1",
+          "explanation": "The present continuous tense 'is writing' converts to passive voice as 'is being written'.",
+          "subject": "English Grammar"
+        },
+        {
+          "id": "ctet_paper1_q9",
+          "text": "The Right of Children to Free and Compulsory Education (RTE) Act was passed by the Indian Parliament in the year:",
+          "type": "single",
+          "options": [
+            "2005",
+            "2009",
+            "2010",
+            "2012"
+          ],
+          "correctAnswer": "1",
+          "explanation": "The RTE Act was enacted in 2009 and came into force on 1 April 2010, guaranteeing free and compulsory education to children aged 6–14 years.",
+          "subject": "Education Policy"
+        },
+        {
+          "id": "ctet_paper1_q10",
+          "text": "Which of the following is the best example of a 'formative' assessment?",
+          "type": "single",
+          "options": [
+            "The final board examination held at year-end",
+            "A short classroom quiz used to check understanding during a lesson",
+            "A one-time entrance test for school admission",
+            "An annual aptitude certification exam"
+          ],
+          "correctAnswer": "1",
+          "explanation": "Formative assessment happens during the learning process to monitor progress and guide teaching, unlike summative assessment (like final exams), which evaluates learning after it is complete.",
+          "subject": "Child Development & Pedagogy"
+        }
+      ]
+    },
+    {
+      "id": "ctet-paper2",
+      "title": "CTET Paper 2 Practice Set",
+      "description": "Pedagogy and general knowledge practice for CTET Paper 2 (upper primary) aspirants.",
+      "category": "State & Teaching Exams",
+      "timeLimit": 10,
+      "totalMarks": 12,
+      "difficulty": "Medium",
+      "questions": [
+        {
+          "id": "ctet_paper2_q1",
+          "text": "Which river is popularly known as the 'Sorrow of Bihar'?",
+          "type": "single",
+          "options": [
+            "Ganga",
+            "Kosi",
+            "Son",
+            "Gandak"
+          ],
+          "correctAnswer": "1",
+          "explanation": "The Kosi river is known as the 'Sorrow of Bihar' due to its frequent and devastating floods.",
+          "subject": "Indian Geography"
+        },
+        {
+          "id": "ctet_paper2_q2",
+          "text": "Fill in the blank: She has been working here ___ 2015.",
+          "type": "single",
+          "options": [
+            "since",
+            "for",
+            "from",
+            "at"
+          ],
+          "correctAnswer": "0",
+          "explanation": "'Since' is used with a specific point in time (2015).",
+          "subject": "English Grammar"
+        },
+        {
+          "id": "ctet_paper2_q3",
+          "text": "Find the odd one out.",
+          "type": "single",
+          "options": [
+            "Apple",
+            "Mango",
+            "Potato",
+            "Banana"
+          ],
+          "correctAnswer": "2",
+          "explanation": "Potato is a vegetable while the other three are fruits.",
+          "subject": "Classification"
+        }
+      ]
+    },
+    {
+      "id": "uptet",
+      "title": "UPTET Practice Set",
+      "description": "Teaching aptitude and general knowledge practice for Uttar Pradesh TET aspirants.",
+      "category": "State & Teaching Exams",
+      "timeLimit": 10,
+      "totalMarks": 12,
+      "difficulty": "Medium",
+      "questions": [
+        {
+          "id": "uptet_q1",
+          "text": "The Jallianwala Bagh massacre took place in the year:",
+          "type": "single",
+          "options": [
+            "1917",
+            "1919",
+            "1921",
+            "1923"
+          ],
+          "correctAnswer": "1",
+          "explanation": "The Jallianwala Bagh massacre occurred on 13 April 1919 in Amritsar.",
+          "subject": "Modern Indian History"
+        },
+        {
+          "id": "uptet_q2",
+          "text": "Find the odd one out.",
+          "type": "single",
+          "options": [
+            "Apple",
+            "Mango",
+            "Potato",
+            "Banana"
+          ],
+          "correctAnswer": "2",
+          "explanation": "Potato is a vegetable while the other three are fruits.",
+          "subject": "Classification"
+        },
+        {
+          "id": "uptet_q3",
+          "text": "A shopkeeper marks an item 25% above cost price and gives a discount of 10% on the marked price. What is his net profit percentage?",
+          "type": "single",
+          "options": [
+            "12.5%",
+            "15%",
+            "10%",
+            "20%"
+          ],
+          "correctAnswer": "0",
+          "explanation": "Net price = 1.25 x 0.90 = 1.125 of CP, i.e. 12.5% profit.",
+          "subject": "Profit & Loss"
+        }
+      ]
+    },
+    {
+      "id": "bihar-stet",
+      "title": "Bihar STET Practice Set",
+      "description": "General knowledge and reasoning practice tailored for Bihar Secondary Teacher Eligibility Test aspirants.",
+      "category": "State & Teaching Exams",
+      "timeLimit": 10,
+      "totalMarks": 12,
+      "difficulty": "Medium",
+      "questions": [
+        {
+          "id": "bihar_stet_q1",
+          "text": "Which is the longest National Highway in India?",
+          "type": "single",
+          "options": [
+            "NH44",
+            "NH48",
+            "NH27",
+            "NH19"
+          ],
+          "correctAnswer": "0",
+          "explanation": "NH44 runs from Srinagar to Kanyakumari and is the longest national highway in India.",
+          "subject": "Indian Geography"
+        },
+        {
+          "id": "bihar_stet_q2",
+          "text": "Pointing to a photograph, a man says, 'She is the daughter of my grandfather's only son.' How is the woman related to the man?",
+          "type": "single",
+          "options": [
+            "Sister",
+            "Mother",
+            "Cousin",
+            "Aunt"
+          ],
+          "correctAnswer": "0",
+          "explanation": "The grandfather's only son is the man's father, so the daughter is the man's sister.",
+          "subject": "Blood Relations"
+        },
+        {
+          "id": "bihar_stet_q3",
+          "text": "Choose the word opposite in meaning to 'ABUNDANT':",
+          "type": "single",
+          "options": [
+            "Plentiful",
+            "Scarce",
+            "Ample",
+            "Copious"
+          ],
+          "correctAnswer": "1",
+          "explanation": "'Scarce' means insufficient or rare, the opposite of 'abundant'.",
+          "subject": "English Vocabulary"
+        }
+      ]
+    },
+    {
+      "id": "wbtet",
+      "title": "WBTET Practice Set",
+      "description": "Teaching aptitude and general knowledge practice for West Bengal TET aspirants.",
+      "category": "State & Teaching Exams",
+      "timeLimit": 10,
+      "totalMarks": 12,
+      "difficulty": "Medium",
+      "questions": [
+        {
+          "id": "wbtet_q1",
+          "text": "Who wrote the national anthem of India, 'Jana Gana Mana'?",
+          "type": "single",
+          "options": [
+            "Bankim Chandra Chatterjee",
+            "Rabindranath Tagore",
+            "Sarojini Naidu",
+            "Muhammad Iqbal"
+          ],
+          "correctAnswer": "1",
+          "explanation": "Rabindranath Tagore composed 'Jana Gana Mana', adopted as India's national anthem.",
+          "subject": "Static GK"
+        },
+        {
+          "id": "wbtet_q2",
+          "text": "Choose the word opposite in meaning to 'ABUNDANT':",
+          "type": "single",
+          "options": [
+            "Plentiful",
+            "Scarce",
+            "Ample",
+            "Copious"
+          ],
+          "correctAnswer": "1",
+          "explanation": "'Scarce' means insufficient or rare, the opposite of 'abundant'.",
+          "subject": "English Vocabulary"
+        },
+        {
+          "id": "wbtet_q3",
+          "text": "In a certain code, 'BOOK' is written as 'CPPL'. How is 'PAGE' written in that code?",
+          "type": "single",
+          "options": [
+            "QBHF",
+            "QBGF",
+            "PBHF",
+            "QAHF"
+          ],
+          "correctAnswer": "0",
+          "explanation": "Each letter is shifted forward by one place: P→Q, A→B, G→H, E→F, giving QBHF.",
+          "subject": "Coding-Decoding"
+        }
+      ]
+    },
+    {
+      "id": "bpsc",
+      "title": "BPSC (Bihar) Prelims Practice Set",
+      "description": "General studies practice covering history, geography, and polity for BPSC aspirants.",
+      "category": "State PSC Exams",
+      "timeLimit": 10,
+      "totalMarks": 12,
+      "difficulty": "Hard",
+      "questions": [
+        {
+          "id": "bpsc_q1",
+          "text": "Chandrayaan-3 successfully landed near the south pole of the Moon in which year?",
+          "type": "single",
+          "options": [
+            "2021",
+            "2022",
+            "2023",
+            "2024"
+          ],
+          "correctAnswer": "2",
+          "explanation": "Chandrayaan-3 made a successful soft landing near the Moon's south pole in August 2023.",
+          "subject": "Current Affairs"
+        },
+        {
+          "id": "bpsc_q2",
+          "text": "In a certain code, 'BOOK' is written as 'CPPL'. How is 'PAGE' written in that code?",
+          "type": "single",
+          "options": [
+            "QBHF",
+            "QBGF",
+            "PBHF",
+            "QAHF"
+          ],
+          "correctAnswer": "0",
+          "explanation": "Each letter is shifted forward by one place: P→Q, A→B, G→H, E→F, giving QBHF.",
+          "subject": "Coding-Decoding"
+        },
+        {
+          "id": "bpsc_q3",
+          "text": "A train covers 360 km in 4 hours. What is its speed (in km/h)?",
+          "type": "numerical",
+          "correctAnswer": "90",
+          "explanation": "Speed = Distance/Time = 360/4 = 90 km/h.",
+          "subject": "Speed, Time & Distance"
+        }
+      ]
+    },
+    {
+      "id": "uppsc",
+      "title": "UPPSC Prelims Practice Set",
+      "description": "General studies and reasoning practice for Uttar Pradesh PSC aspirants.",
+      "category": "State PSC Exams",
+      "timeLimit": 10,
+      "totalMarks": 12,
+      "difficulty": "Hard",
+      "questions": [
+        {
+          "id": "uppsc_q1",
+          "text": "Which Indian state has Patna as its capital?",
+          "type": "single",
+          "options": [
+            "Jharkhand",
+            "Bihar",
+            "Uttar Pradesh",
+            "West Bengal"
+          ],
+          "correctAnswer": "1",
+          "explanation": "Patna is the capital city of the state of Bihar.",
+          "subject": "Indian Geography"
+        },
+        {
+          "id": "uppsc_q2",
+          "text": "Which number will replace the question mark? 5, 10, 20, 40, ?",
+          "type": "single",
+          "options": [
+            "60",
+            "70",
+            "80",
+            "90"
+          ],
+          "correctAnswer": "2",
+          "explanation": "Each number is double the previous one: 40x2=80.",
+          "subject": "Number Series"
+        },
+        {
+          "id": "uppsc_q3",
+          "text": "What is the compound interest on ₹10,000 at 10% per annum for 2 years, compounded annually (in ₹)?",
+          "type": "single",
+          "options": [
+            "₹2,000",
+            "₹2,100",
+            "₹1,000",
+            "₹2,200"
+          ],
+          "correctAnswer": "1",
+          "explanation": "CI = 10000 x (1.1² - 1) = 10000 x 0.21 = ₹2,100.",
+          "subject": "Compound Interest"
+        }
+      ]
+    },
+    {
+      "id": "wbpsc",
+      "title": "WBPSC Prelims Practice Set",
+      "description": "General studies practice for West Bengal Public Service Commission aspirants.",
+      "category": "State PSC Exams",
+      "timeLimit": 10,
+      "totalMarks": 12,
+      "difficulty": "Hard",
+      "questions": [
+        {
+          "id": "wbpsc_q1",
+          "text": "The Battle of Plassey was fought in the year:",
+          "type": "single",
+          "options": [
+            "1757",
+            "1764",
+            "1857",
+            "1707"
+          ],
+          "correctAnswer": "0",
+          "explanation": "The Battle of Plassey, fought in 1757, marked the beginning of British political control in India.",
+          "subject": "Modern Indian History"
+        },
+        {
+          "id": "wbpsc_q2",
+          "text": "What is the compound interest on ₹10,000 at 10% per annum for 2 years, compounded annually (in ₹)?",
+          "type": "single",
+          "options": [
+            "₹2,000",
+            "₹2,100",
+            "₹1,000",
+            "₹2,200"
+          ],
+          "correctAnswer": "1",
+          "explanation": "CI = 10000 x (1.1² - 1) = 10000 x 0.21 = ₹2,100.",
+          "subject": "Compound Interest"
+        },
+        {
+          "id": "wbpsc_q3",
+          "text": "Complete the analogy: Doctor : Hospital :: Teacher : ?",
+          "type": "single",
+          "options": [
+            "Clinic",
+            "School",
+            "Court",
+            "Office"
+          ],
+          "correctAnswer": "1",
+          "explanation": "A doctor works in a hospital just as a teacher works in a school.",
+          "subject": "Analogy"
+        }
+      ]
+    },
+    {
+      "id": "mppsc",
+      "title": "MPPSC Prelims Practice Set",
+      "description": "General studies and current affairs practice for Madhya Pradesh PSC aspirants.",
+      "category": "State PSC Exams",
+      "timeLimit": 10,
+      "totalMarks": 12,
+      "difficulty": "Hard",
+      "questions": [
+        {
+          "id": "mppsc_q1",
+          "text": "Which is the smallest state in India by area?",
+          "type": "single",
+          "options": [
+            "Sikkim",
+            "Goa",
+            "Tripura",
+            "Nagaland"
+          ],
+          "correctAnswer": "1",
+          "explanation": "Goa is the smallest Indian state by geographical area.",
+          "subject": "Indian Geography"
+        },
+        {
+          "id": "mppsc_q2",
+          "text": "Complete the analogy: Doctor : Hospital :: Teacher : ?",
+          "type": "single",
+          "options": [
+            "Clinic",
+            "School",
+            "Court",
+            "Office"
+          ],
+          "correctAnswer": "1",
+          "explanation": "A doctor works in a hospital just as a teacher works in a school.",
+          "subject": "Analogy"
+        },
+        {
+          "id": "mppsc_q3",
+          "text": "A man buys an article for ₹800 and sells it at a loss of 15%. What is the selling price (in ₹)?",
+          "type": "numerical",
+          "correctAnswer": "680",
+          "explanation": "SP = 800 x 0.85 = 680.",
+          "subject": "Profit & Loss"
+        }
+      ]
+    },
+    {
+      "id": "bihar-police-si",
+      "title": "Bihar Police SI Practice Set",
+      "description": "General knowledge and reasoning practice for Bihar Police Sub-Inspector aspirants.",
+      "category": "Police Exams",
+      "timeLimit": 10,
+      "totalMarks": 12,
+      "difficulty": "Medium",
+      "questions": [
+        {
+          "id": "bihar_police_si_q1",
+          "text": "The Rajgir hills, associated with ancient Magadha, are located in which present-day state?",
+          "type": "single",
+          "options": [
+            "Bihar",
+            "Jharkhand",
+            "Odisha",
+            "Uttar Pradesh"
+          ],
+          "correctAnswer": "0",
+          "explanation": "Rajgir, an ancient capital of the Magadha kingdom, is located in present-day Bihar.",
+          "subject": "Ancient Indian History"
+        },
+        {
+          "id": "bihar_police_si_q2",
+          "text": "In a certain code, 'BOOK' is written as 'CPPL'. How is 'PAGE' written in that code?",
+          "type": "single",
+          "options": [
+            "QBHF",
+            "QBGF",
+            "PBHF",
+            "QAHF"
+          ],
+          "correctAnswer": "0",
+          "explanation": "Each letter is shifted forward by one place: P→Q, A→B, G→H, E→F, giving QBHF.",
+          "subject": "Coding-Decoding"
+        },
+        {
+          "id": "bihar_police_si_q3",
+          "text": "If the cost price of an item is ₹450 and it is sold at a profit of 20%, what is the selling price (in ₹)?",
+          "type": "numerical",
+          "correctAnswer": "540",
+          "explanation": "SP = CP x 1.20 = 450 x 1.2 = 540.",
+          "subject": "Profit & Loss"
+        }
+      ]
+    },
+    {
+      "id": "bihar-police-constable",
+      "title": "Bihar Police Constable Practice Set",
+      "description": "Basic general knowledge and reasoning for Bihar Police Constable aspirants.",
+      "category": "Police Exams",
+      "timeLimit": 10,
+      "totalMarks": 12,
+      "difficulty": "Easy",
+      "questions": [
+        {
+          "id": "bihar_police_constable_q1",
+          "text": "Which Article of the Indian Constitution abolishes untouchability?",
+          "type": "single",
+          "options": [
+            "Article 15",
+            "Article 17",
+            "Article 21",
+            "Article 32"
+          ],
+          "correctAnswer": "1",
+          "explanation": "Article 17 of the Indian Constitution abolishes untouchability in any form.",
+          "subject": "Indian Polity"
+        },
+        {
+          "id": "bihar_police_constable_q2",
+          "text": "Which number will replace the question mark? 5, 10, 20, 40, ?",
+          "type": "single",
+          "options": [
+            "60",
+            "70",
+            "80",
+            "90"
+          ],
+          "correctAnswer": "2",
+          "explanation": "Each number is double the previous one: 40x2=80.",
+          "subject": "Number Series"
+        },
+        {
+          "id": "bihar_police_constable_q3",
+          "text": "The average of five consecutive even numbers is 24. What is the largest number among them?",
+          "type": "numerical",
+          "correctAnswer": "28",
+          "explanation": "Numbers: 20,22,24,26,28 — average is 24, largest is 28.",
+          "subject": "Averages"
+        }
+      ]
+    },
+    {
+      "id": "up-police-constable",
+      "title": "UP Police Constable Practice Set",
+      "description": "General knowledge and reasoning practice for UP Police Constable aspirants.",
+      "category": "Police Exams",
+      "timeLimit": 10,
+      "totalMarks": 12,
+      "difficulty": "Easy",
+      "questions": [
+        {
+          "id": "up_police_constable_q1",
+          "text": "Who was the first President of independent India?",
+          "type": "single",
+          "options": [
+            "Dr. Rajendra Prasad",
+            "Jawaharlal Nehru",
+            "Dr. S. Radhakrishnan",
+            "Zakir Hussain"
+          ],
+          "correctAnswer": "0",
+          "explanation": "Dr. Rajendra Prasad served as the first President of India from 1950 to 1962.",
+          "subject": "Static GK"
+        },
+        {
+          "id": "up_police_constable_q2",
+          "text": "Statements: All pens are pencils. All pencils are erasers. Conclusion: All pens are erasers. Is the conclusion valid?",
+          "type": "single",
+          "options": [
+            "Valid",
+            "Invalid",
+            "Cannot be determined",
+            "None of these"
+          ],
+          "correctAnswer": "0",
+          "explanation": "Since all pens are pencils and all pencils are erasers, it logically follows that all pens are erasers.",
+          "subject": "Syllogism"
+        },
+        {
+          "id": "up_police_constable_q3",
+          "text": "Which part of the human body is primarily affected by the disease 'Arthritis'?",
+          "type": "single",
+          "options": [
+            "Lungs",
+            "Joints",
+            "Heart",
+            "Kidneys"
+          ],
+          "correctAnswer": "1",
+          "explanation": "Arthritis is a condition causing inflammation and pain in the joints.",
+          "subject": "Biology"
+        }
+      ]
+    },
+    {
+      "id": "delhi-police-constable",
+      "title": "Delhi Police Constable Practice Set",
+      "description": "General awareness and reasoning practice for Delhi Police Constable aspirants.",
+      "category": "Police Exams",
+      "timeLimit": 10,
+      "totalMarks": 12,
+      "difficulty": "Easy",
+      "questions": [
+        {
+          "id": "delhi_police_constable_q1",
+          "text": "The Sun Temple at Konark is located in which state?",
+          "type": "single",
+          "options": [
+            "Odisha",
+            "Tamil Nadu",
+            "Gujarat",
+            "Rajasthan"
+          ],
+          "correctAnswer": "0",
+          "explanation": "The Konark Sun Temple, a UNESCO World Heritage Site, is located in Odisha.",
+          "subject": "Static GK"
+        },
+        {
+          "id": "delhi_police_constable_q2",
+          "text": "If South-East becomes North, North-East becomes West, what does South become?",
+          "type": "single",
+          "options": [
+            "North-West",
+            "East",
+            "South-West",
+            "North-East"
+          ],
+          "correctAnswer": "0",
+          "explanation": "Each direction is rotated 135° anticlockwise; South maps to North-West.",
+          "subject": "Direction Sense"
+        },
+        {
+          "id": "delhi_police_constable_q3",
+          "text": "What is 15% of 340?",
+          "type": "numerical",
+          "correctAnswer": "51",
+          "explanation": "15% of 340 = 0.15 x 340 = 51.",
+          "subject": "Percentage"
+        }
+      ]
+    },
+    {
+      "id": "capf-ac",
+      "title": "CAPF AC Practice Set",
+      "description": "General studies and reasoning practice for CAPF Assistant Commandant aspirants.",
+      "category": "Defence Exams",
+      "timeLimit": 10,
+      "totalMarks": 12,
+      "difficulty": "Hard",
+      "questions": [
+        {
+          "id": "capf_ac_q1",
+          "text": "Which river is popularly known as the 'Sorrow of Bihar'?",
+          "type": "single",
+          "options": [
+            "Ganga",
+            "Kosi",
+            "Son",
+            "Gandak"
+          ],
+          "correctAnswer": "1",
+          "explanation": "The Kosi river is known as the 'Sorrow of Bihar' due to its frequent and devastating floods.",
+          "subject": "Indian Geography"
+        },
+        {
+          "id": "capf_ac_q2",
+          "text": "A is the brother of B. C is the mother of A. D is the father of C. How is B related to D?",
+          "type": "single",
+          "options": [
+            "Grandson/Granddaughter",
+            "Son",
+            "Daughter",
+            "Nephew"
+          ],
+          "correctAnswer": "0",
+          "explanation": "C is A's mother, so C is also B's mother; D is C's father, making D the grandfather of both A and B.",
+          "subject": "Blood Relations"
+        },
+        {
+          "id": "capf_ac_q3",
+          "text": "Two pipes can fill a tank in 20 and 30 minutes respectively. How long will both pipes take to fill the tank together (in minutes)?",
+          "type": "numerical",
+          "correctAnswer": "12",
+          "explanation": "Combined rate = 1/20+1/30 = 1/12, so time = 12 minutes.",
+          "subject": "Time & Work"
+        }
+      ]
+    },
+    {
+      "id": "afcat",
+      "title": "AFCAT Practice Set",
+      "description": "General awareness, reasoning, and basic quant for Air Force Common Admission Test aspirants.",
+      "category": "Defence Exams",
+      "timeLimit": 10,
+      "totalMarks": 12,
+      "difficulty": "Medium",
+      "questions": [
+        {
+          "id": "afcat_q1",
+          "text": "The Jallianwala Bagh massacre took place in the year:",
+          "type": "single",
+          "options": [
+            "1917",
+            "1919",
+            "1921",
+            "1923"
+          ],
+          "correctAnswer": "1",
+          "explanation": "The Jallianwala Bagh massacre occurred on 13 April 1919 in Amritsar.",
+          "subject": "Modern Indian History"
+        },
+        {
+          "id": "afcat_q2",
+          "text": "Find the odd one out.",
+          "type": "single",
+          "options": [
+            "Apple",
+            "Mango",
+            "Potato",
+            "Banana"
+          ],
+          "correctAnswer": "2",
+          "explanation": "Potato is a vegetable while the other three are fruits.",
+          "subject": "Classification"
+        },
+        {
+          "id": "afcat_q3",
+          "text": "A shopkeeper marks an item 25% above cost price and gives a discount of 10% on the marked price. What is his net profit percentage?",
+          "type": "single",
+          "options": [
+            "12.5%",
+            "15%",
+            "10%",
+            "20%"
+          ],
+          "correctAnswer": "0",
+          "explanation": "Net price = 1.25 x 0.90 = 1.125 of CP, i.e. 12.5% profit.",
+          "subject": "Profit & Loss"
+        }
+      ]
+    },
+    {
+      "id": "nda",
+      "title": "NDA Practice Set",
+      "description": "Mathematics and general awareness practice for National Defence Academy aspirants.",
+      "category": "Defence Exams",
+      "timeLimit": 10,
+      "totalMarks": 12,
+      "difficulty": "Hard",
+      "questions": [
+        {
+          "id": "nda_q1",
+          "text": "Two pipes can fill a tank in 20 and 30 minutes respectively. How long will both pipes take to fill the tank together (in minutes)?",
+          "type": "numerical",
+          "correctAnswer": "12",
+          "explanation": "Combined rate = 1/20+1/30 = 1/12, so time = 12 minutes.",
+          "subject": "Time & Work"
+        },
+        {
+          "id": "nda_q2",
+          "text": "Who wrote the national anthem of India, 'Jana Gana Mana'?",
+          "type": "single",
+          "options": [
+            "Bankim Chandra Chatterjee",
+            "Rabindranath Tagore",
+            "Sarojini Naidu",
+            "Muhammad Iqbal"
+          ],
+          "correctAnswer": "1",
+          "explanation": "Rabindranath Tagore composed 'Jana Gana Mana', adopted as India's national anthem.",
+          "subject": "Static GK"
+        },
+        {
+          "id": "nda_q3",
+          "text": "Complete the analogy: Doctor : Hospital :: Teacher : ?",
+          "type": "single",
+          "options": [
+            "Clinic",
+            "School",
+            "Court",
+            "Office"
+          ],
+          "correctAnswer": "1",
+          "explanation": "A doctor works in a hospital just as a teacher works in a school.",
+          "subject": "Analogy"
+        }
+      ]
+    },
+    {
+      "id": "cds",
+      "title": "CDS Practice Set",
+      "description": "General knowledge and reasoning practice for Combined Defence Services aspirants.",
+      "category": "Defence Exams",
+      "timeLimit": 10,
+      "totalMarks": 12,
+      "difficulty": "Hard",
+      "questions": [
+        {
+          "id": "cds_q1",
+          "text": "Who wrote the national anthem of India, 'Jana Gana Mana'?",
+          "type": "single",
+          "options": [
+            "Bankim Chandra Chatterjee",
+            "Rabindranath Tagore",
+            "Sarojini Naidu",
+            "Muhammad Iqbal"
+          ],
+          "correctAnswer": "1",
+          "explanation": "Rabindranath Tagore composed 'Jana Gana Mana', adopted as India's national anthem.",
+          "subject": "Static GK"
+        },
+        {
+          "id": "cds_q2",
+          "text": "Complete the analogy: Doctor : Hospital :: Teacher : ?",
+          "type": "single",
+          "options": [
+            "Clinic",
+            "School",
+            "Court",
+            "Office"
+          ],
+          "correctAnswer": "1",
+          "explanation": "A doctor works in a hospital just as a teacher works in a school.",
+          "subject": "Analogy"
+        },
+        {
+          "id": "cds_q3",
+          "text": "The LCM of 12 and 18 is:",
+          "type": "numerical",
+          "correctAnswer": "36",
+          "explanation": "Multiples: 12x3=36, 18x2=36, so LCM = 36.",
+          "subject": "Number System"
+        }
+      ]
+    },
+    {
+      "id": "territorial-army",
+      "title": "Territorial Army Practice Set",
+      "description": "General awareness and reasoning practice for Territorial Army officer aspirants.",
+      "category": "Defence Exams",
+      "timeLimit": 10,
+      "totalMarks": 12,
+      "difficulty": "Medium",
+      "questions": [
+        {
+          "id": "territorial_army_q1",
+          "text": "Chandrayaan-3 successfully landed near the south pole of the Moon in which year?",
+          "type": "single",
+          "options": [
+            "2021",
+            "2022",
+            "2023",
+            "2024"
+          ],
+          "correctAnswer": "2",
+          "explanation": "Chandrayaan-3 made a successful soft landing near the Moon's south pole in August 2023.",
+          "subject": "Current Affairs"
+        },
+        {
+          "id": "territorial_army_q2",
+          "text": "In a certain code, 'BOOK' is written as 'CPPL'. How is 'PAGE' written in that code?",
+          "type": "single",
+          "options": [
+            "QBHF",
+            "QBGF",
+            "PBHF",
+            "QAHF"
+          ],
+          "correctAnswer": "0",
+          "explanation": "Each letter is shifted forward by one place: P→Q, A→B, G→H, E→F, giving QBHF.",
+          "subject": "Coding-Decoding"
+        },
+        {
+          "id": "territorial_army_q3",
+          "text": "Which part of the human body is primarily affected by the disease 'Arthritis'?",
+          "type": "single",
+          "options": [
+            "Lungs",
+            "Joints",
+            "Heart",
+            "Kidneys"
+          ],
+          "correctAnswer": "1",
+          "explanation": "Arthritis is a condition causing inflammation and pain in the joints.",
+          "subject": "Biology"
+        }
+      ]
+    },
+    {
+      "id": "pcs-j",
+      "title": "Judiciary (PCS-J) Practice Set",
+      "description": "General knowledge and reasoning practice for state judicial services (PCS-J) aspirants.",
+      "category": "Judicial Exams",
+      "timeLimit": 10,
+      "totalMarks": 12,
+      "difficulty": "Hard",
+      "questions": [
+        {
+          "id": "pcs_j_q1",
+          "text": "Which Indian state has Patna as its capital?",
+          "type": "single",
+          "options": [
+            "Jharkhand",
+            "Bihar",
+            "Uttar Pradesh",
+            "West Bengal"
+          ],
+          "correctAnswer": "1",
+          "explanation": "Patna is the capital city of the state of Bihar.",
+          "subject": "Indian Geography"
+        },
+        {
+          "id": "pcs_j_q2",
+          "text": "Which number will replace the question mark? 5, 10, 20, 40, ?",
+          "type": "single",
+          "options": [
+            "60",
+            "70",
+            "80",
+            "90"
+          ],
+          "correctAnswer": "2",
+          "explanation": "Each number is double the previous one: 40x2=80.",
+          "subject": "Number Series"
+        },
+        {
+          "id": "pcs_j_q3",
+          "text": "Fill in the blank: She has been working here ___ 2015.",
+          "type": "single",
+          "options": [
+            "since",
+            "for",
+            "from",
+            "at"
+          ],
+          "correctAnswer": "0",
+          "explanation": "'Since' is used with a specific point in time (2015).",
+          "subject": "English Grammar"
+        }
+      ]
+    },
+    {
+      "id": "delhi-judicial",
+      "title": "Delhi Judicial Services Practice Set",
+      "description": "General studies and English practice for Delhi Judicial Services aspirants.",
+      "category": "Judicial Exams",
+      "timeLimit": 10,
+      "totalMarks": 12,
+      "difficulty": "Hard",
+      "questions": [
+        {
+          "id": "delhi_judicial_q1",
+          "text": "Who was the first President of independent India?",
+          "type": "single",
+          "options": [
+            "Dr. Rajendra Prasad",
+            "Jawaharlal Nehru",
+            "Dr. S. Radhakrishnan",
+            "Zakir Hussain"
+          ],
+          "correctAnswer": "0",
+          "explanation": "Dr. Rajendra Prasad served as the first President of India from 1950 to 1962.",
+          "subject": "Static GK"
+        },
+        {
+          "id": "delhi_judicial_q2",
+          "text": "Fill in the blank: She has been working here ___ 2015.",
+          "type": "single",
+          "options": [
+            "since",
+            "for",
+            "from",
+            "at"
+          ],
+          "correctAnswer": "0",
+          "explanation": "'Since' is used with a specific point in time (2015).",
+          "subject": "English Grammar"
+        },
+        {
+          "id": "delhi_judicial_q3",
+          "text": "Complete the analogy: Doctor : Hospital :: Teacher : ?",
+          "type": "single",
+          "options": [
+            "Clinic",
+            "School",
+            "Court",
+            "Office"
+          ],
+          "correctAnswer": "1",
+          "explanation": "A doctor works in a hospital just as a teacher works in a school.",
+          "subject": "Analogy"
+        }
+      ]
+    },
+    {
+      "id": "cuet-ug",
+      "title": "CUET UG Practice Set",
+      "description": "General test practice covering quant, reasoning, and general awareness for CUET UG aspirants.",
+      "category": "University Entrance Exams",
+      "timeLimit": 10,
+      "totalMarks": 12,
+      "difficulty": "Medium",
+      "questions": [
+        {
+          "id": "cuet_ug_q1",
+          "text": "A train covers 360 km in 4 hours. What is its speed (in km/h)?",
+          "type": "numerical",
+          "correctAnswer": "90",
+          "explanation": "Speed = Distance/Time = 360/4 = 90 km/h.",
+          "subject": "Speed, Time & Distance"
+        },
+        {
+          "id": "cuet_ug_q2",
+          "text": "Statements: All pens are pencils. All pencils are erasers. Conclusion: All pens are erasers. Is the conclusion valid?",
+          "type": "single",
+          "options": [
+            "Valid",
+            "Invalid",
+            "Cannot be determined",
+            "None of these"
+          ],
+          "correctAnswer": "0",
+          "explanation": "Since all pens are pencils and all pencils are erasers, it logically follows that all pens are erasers.",
+          "subject": "Syllogism"
+        },
+        {
+          "id": "cuet_ug_q3",
+          "text": "The Rajgir hills, associated with ancient Magadha, are located in which present-day state?",
+          "type": "single",
+          "options": [
+            "Bihar",
+            "Jharkhand",
+            "Odisha",
+            "Uttar Pradesh"
+          ],
+          "correctAnswer": "0",
+          "explanation": "Rajgir, an ancient capital of the Magadha kingdom, is located in present-day Bihar.",
+          "subject": "Ancient Indian History"
+        }
+      ]
+    },
+    {
+      "id": "clat-pg",
+      "title": "CLAT PG Practice Set",
+      "description": "Legal reasoning-adjacent general knowledge and English practice for CLAT PG aspirants.",
+      "category": "Law Exams",
+      "timeLimit": 10,
+      "totalMarks": 12,
+      "difficulty": "Hard",
+      "questions": [
+        {
+          "id": "clat_pg_q1",
+          "text": "Which is the smallest state in India by area?",
+          "type": "single",
+          "options": [
+            "Sikkim",
+            "Goa",
+            "Tripura",
+            "Nagaland"
+          ],
+          "correctAnswer": "1",
+          "explanation": "Goa is the smallest Indian state by geographical area.",
+          "subject": "Indian Geography"
+        },
+        {
+          "id": "clat_pg_q2",
+          "text": "Choose the word opposite in meaning to 'ABUNDANT':",
+          "type": "single",
+          "options": [
+            "Plentiful",
+            "Scarce",
+            "Ample",
+            "Copious"
+          ],
+          "correctAnswer": "1",
+          "explanation": "'Scarce' means insufficient or rare, the opposite of 'abundant'.",
+          "subject": "English Vocabulary"
+        },
+        {
+          "id": "clat_pg_q3",
+          "text": "A is the brother of B. C is the mother of A. D is the father of C. How is B related to D?",
+          "type": "single",
+          "options": [
+            "Grandson/Granddaughter",
+            "Son",
+            "Daughter",
+            "Nephew"
+          ],
+          "correctAnswer": "0",
+          "explanation": "C is A's mother, so C is also B's mother; D is C's father, making D the grandfather of both A and B.",
+          "subject": "Blood Relations"
+        }
+      ]
+    },
+    {
+      "id": "cat-mba",
+      "title": "CAT (MBA Entrance) Practice Set",
+      "description": "Quantitative aptitude and reasoning practice for CAT and other MBA entrance exams.",
+      "category": "Management Entrance Exams",
+      "timeLimit": 10,
+      "totalMarks": 12,
+      "difficulty": "Hard",
+      "questions": [
+        {
+          "id": "cat_mba_q1",
+          "text": "The ratio of two numbers is 3:4 and their sum is 63. What is the smaller number?",
+          "type": "numerical",
+          "correctAnswer": "27",
+          "explanation": "3x+4x=63 → x=9, smaller number = 3x9=27.",
+          "subject": "Ratio & Proportion"
+        },
+        {
+          "id": "cat_mba_q2",
+          "text": "A is the brother of B. C is the mother of A. D is the father of C. How is B related to D?",
+          "type": "single",
+          "options": [
+            "Grandson/Granddaughter",
+            "Son",
+            "Daughter",
+            "Nephew"
+          ],
+          "correctAnswer": "0",
+          "explanation": "C is A's mother, so C is also B's mother; D is C's father, making D the grandfather of both A and B.",
+          "subject": "Blood Relations"
+        },
+        {
+          "id": "cat_mba_q3",
+          "text": "Choose the word opposite in meaning to 'ABUNDANT':",
+          "type": "single",
+          "options": [
+            "Plentiful",
+            "Scarce",
+            "Ample",
+            "Copious"
+          ],
+          "correctAnswer": "1",
+          "explanation": "'Scarce' means insufficient or rare, the opposite of 'abundant'.",
+          "subject": "English Vocabulary"
+        }
+      ]
+    },
+    {
+      "id": "cmat",
+      "title": "CMAT Practice Set",
+      "description": "Quant, reasoning, and general awareness practice for CMAT aspirants.",
+      "category": "Management Entrance Exams",
+      "timeLimit": 10,
+      "totalMarks": 12,
+      "difficulty": "Medium",
+      "questions": [
+        {
+          "id": "cmat_q1",
+          "text": "A man buys an article for ₹800 and sells it at a loss of 15%. What is the selling price (in ₹)?",
+          "type": "numerical",
+          "correctAnswer": "680",
+          "explanation": "SP = 800 x 0.85 = 680.",
+          "subject": "Profit & Loss"
+        },
+        {
+          "id": "cmat_q2",
+          "text": "Who was the first President of independent India?",
+          "type": "single",
+          "options": [
+            "Dr. Rajendra Prasad",
+            "Jawaharlal Nehru",
+            "Dr. S. Radhakrishnan",
+            "Zakir Hussain"
+          ],
+          "correctAnswer": "0",
+          "explanation": "Dr. Rajendra Prasad served as the first President of India from 1950 to 1962.",
+          "subject": "Static GK"
+        },
+        {
+          "id": "cmat_q3",
+          "text": "Pointing to a photograph, a man says, 'She is the daughter of my grandfather's only son.' How is the woman related to the man?",
+          "type": "single",
+          "options": [
+            "Sister",
+            "Mother",
+            "Cousin",
+            "Aunt"
+          ],
+          "correctAnswer": "0",
+          "explanation": "The grandfather's only son is the man's father, so the daughter is the man's sister.",
+          "subject": "Blood Relations"
+        }
+      ]
+    },
+    {
+      "id": "gate-cs",
+      "title": "GATE (Computer Science) Practice Set",
+      "description": "General aptitude and reasoning practice questions accompanying the GATE CS exam pattern.",
+      "category": "Engineering Entrance Exams",
+      "timeLimit": 10,
+      "totalMarks": 12,
+      "difficulty": "Hard",
+      "questions": [
+        {
+          "id": "gate_cs_q1",
+          "text": "Which number will replace the question mark? 5, 10, 20, 40, ?",
+          "type": "single",
+          "options": [
+            "60",
+            "70",
+            "80",
+            "90"
+          ],
+          "correctAnswer": "2",
+          "explanation": "Each number is double the previous one: 40x2=80.",
+          "subject": "Number Series"
+        },
+        {
+          "id": "gate_cs_q2",
+          "text": "What is the compound interest on ₹10,000 at 10% per annum for 2 years, compounded annually (in ₹)?",
+          "type": "single",
+          "options": [
+            "₹2,000",
+            "₹2,100",
+            "₹1,000",
+            "₹2,200"
+          ],
+          "correctAnswer": "1",
+          "explanation": "CI = 10000 x (1.1² - 1) = 10000 x 0.21 = ₹2,100.",
+          "subject": "Compound Interest"
+        },
+        {
+          "id": "gate_cs_q3",
+          "text": "Photosynthesis primarily occurs in which part of a plant cell?",
+          "type": "single",
+          "options": [
+            "Mitochondria",
+            "Nucleus",
+            "Chloroplast",
+            "Ribosome"
+          ],
+          "correctAnswer": "2",
+          "explanation": "Chloroplasts contain chlorophyll and are the site of photosynthesis in plant cells.",
+          "subject": "Biology"
+        }
+      ]
+    },
+    {
+      "id": "gate-mech",
+      "title": "GATE (Mechanical) Practice Set",
+      "description": "General aptitude, reasoning, and basic science practice for GATE Mechanical aspirants.",
+      "category": "Engineering Entrance Exams",
+      "timeLimit": 10,
+      "totalMarks": 12,
+      "difficulty": "Hard",
+      "questions": [
+        {
+          "id": "gate_mech_q1",
+          "text": "Statements: All pens are pencils. All pencils are erasers. Conclusion: All pens are erasers. Is the conclusion valid?",
+          "type": "single",
+          "options": [
+            "Valid",
+            "Invalid",
+            "Cannot be determined",
+            "None of these"
+          ],
+          "correctAnswer": "0",
+          "explanation": "Since all pens are pencils and all pencils are erasers, it logically follows that all pens are erasers.",
+          "subject": "Syllogism"
+        },
+        {
+          "id": "gate_mech_q2",
+          "text": "Photosynthesis primarily occurs in which part of a plant cell?",
+          "type": "single",
+          "options": [
+            "Mitochondria",
+            "Nucleus",
+            "Chloroplast",
+            "Ribosome"
+          ],
+          "correctAnswer": "2",
+          "explanation": "Chloroplasts contain chlorophyll and are the site of photosynthesis in plant cells.",
+          "subject": "Biology"
+        },
+        {
+          "id": "gate_mech_q3",
+          "text": "A man buys an article for ₹800 and sells it at a loss of 15%. What is the selling price (in ₹)?",
+          "type": "numerical",
+          "correctAnswer": "680",
+          "explanation": "SP = 800 x 0.85 = 680.",
+          "subject": "Profit & Loss"
+        }
+      ]
+    },
+    {
+      "id": "aiims-nursing",
+      "title": "AIIMS Nursing Practice Set",
+      "description": "General knowledge and basic science practice for AIIMS Nursing entrance aspirants.",
+      "category": "Medical Exams",
+      "timeLimit": 10,
+      "totalMarks": 12,
+      "difficulty": "Medium",
+      "questions": [
+        {
+          "id": "aiims_nursing_q1",
+          "text": "Photosynthesis primarily occurs in which part of a plant cell?",
+          "type": "single",
+          "options": [
+            "Mitochondria",
+            "Nucleus",
+            "Chloroplast",
+            "Ribosome"
+          ],
+          "correctAnswer": "2",
+          "explanation": "Chloroplasts contain chlorophyll and are the site of photosynthesis in plant cells.",
+          "subject": "Biology"
+        },
+        {
+          "id": "aiims_nursing_q2",
+          "text": "Which Article of the Indian Constitution abolishes untouchability?",
+          "type": "single",
+          "options": [
+            "Article 15",
+            "Article 17",
+            "Article 21",
+            "Article 32"
+          ],
+          "correctAnswer": "1",
+          "explanation": "Article 17 of the Indian Constitution abolishes untouchability in any form.",
+          "subject": "Indian Polity"
+        },
+        {
+          "id": "aiims_nursing_q3",
+          "text": "Choose the word opposite in meaning to 'ABUNDANT':",
+          "type": "single",
+          "options": [
+            "Plentiful",
+            "Scarce",
+            "Ample",
+            "Copious"
+          ],
+          "correctAnswer": "1",
+          "explanation": "'Scarce' means insufficient or rare, the opposite of 'abundant'.",
+          "subject": "English Vocabulary"
+        }
+      ]
+    },
+    {
+      "id": "neet-pg",
+      "title": "NEET PG Practice Set",
+      "description": "General medical science and awareness practice for NEET PG aspirants.",
+      "category": "Medical Exams",
+      "timeLimit": 10,
+      "totalMarks": 12,
+      "difficulty": "Hard",
+      "questions": [
+        {
+          "id": "neet_pg_q1",
+          "text": "The SI unit of force is:",
+          "type": "single",
+          "options": [
+            "Joule",
+            "Newton",
+            "Pascal",
+            "Watt"
+          ],
+          "correctAnswer": "1",
+          "explanation": "The SI unit of force is the Newton (N).",
+          "subject": "Physics"
+        },
+        {
+          "id": "neet_pg_q2",
+          "text": "Who was the first President of independent India?",
+          "type": "single",
+          "options": [
+            "Dr. Rajendra Prasad",
+            "Jawaharlal Nehru",
+            "Dr. S. Radhakrishnan",
+            "Zakir Hussain"
+          ],
+          "correctAnswer": "0",
+          "explanation": "Dr. Rajendra Prasad served as the first President of India from 1950 to 1962.",
+          "subject": "Static GK"
+        },
+        {
+          "id": "neet_pg_q3",
+          "text": "Pointing to a photograph, a man says, 'She is the daughter of my grandfather's only son.' How is the woman related to the man?",
+          "type": "single",
+          "options": [
+            "Sister",
+            "Mother",
+            "Cousin",
+            "Aunt"
+          ],
+          "correctAnswer": "0",
+          "explanation": "The grandfather's only son is the man's father, so the daughter is the man's sister.",
+          "subject": "Blood Relations"
+        }
+      ]
+    },
+    {
+      "id": "forest-guard",
+      "title": "Forest Guard / Van Rakshak Practice Set",
+      "description": "General knowledge, basic science, and reasoning practice for Forest Guard aspirants.",
+      "category": "State & Teaching Exams",
+      "timeLimit": 10,
+      "totalMarks": 12,
+      "difficulty": "Easy",
+      "questions": [
+        {
+          "id": "forest_guard_q1",
+          "text": "Who was the first President of independent India?",
+          "type": "single",
+          "options": [
+            "Dr. Rajendra Prasad",
+            "Jawaharlal Nehru",
+            "Dr. S. Radhakrishnan",
+            "Zakir Hussain"
+          ],
+          "correctAnswer": "0",
+          "explanation": "Dr. Rajendra Prasad served as the first President of India from 1950 to 1962.",
+          "subject": "Static GK"
+        },
+        {
+          "id": "forest_guard_q2",
+          "text": "The chemical formula of common salt is:",
+          "type": "single",
+          "options": [
+            "NaCl",
+            "KCl",
+            "CaCl2",
+            "NaOH"
+          ],
+          "correctAnswer": "0",
+          "explanation": "Common salt (sodium chloride) has the chemical formula NaCl.",
+          "subject": "Chemistry"
+        },
+        {
+          "id": "forest_guard_q3",
+          "text": "Complete the analogy: Doctor : Hospital :: Teacher : ?",
+          "type": "single",
+          "options": [
+            "Clinic",
+            "School",
+            "Court",
+            "Office"
+          ],
+          "correctAnswer": "1",
+          "explanation": "A doctor works in a hospital just as a teacher works in a school.",
+          "subject": "Analogy"
+        }
+      ]
+    },
+    {
+      "id": "upsc-cse-prelims",
+      "title": "UPSC Civil Services Prelims (GS Paper 1) Practice Set",
+      "description": "Polity, history, geography, economy, and current-affairs based general studies practice in the pattern of the UPSC Civil Services Preliminary Examination.",
+      "category": "UPSC & Civil Services",
+      "timeLimit": 20,
+      "totalMarks": 40,
+      "difficulty": "Hard",
+      "questions": [
+        {
+          "id": "upsc_cse_q1",
+          "text": "Which Article of the Indian Constitution empowers citizens to move the Supreme Court directly for the enforcement of Fundamental Rights?",
+          "type": "single",
+          "options": [
+            "Article 19",
+            "Article 21",
+            "Article 32",
+            "Article 44"
+          ],
+          "correctAnswer": "2",
+          "explanation": "Article 32 provides the Right to Constitutional Remedies, which Dr. B.R. Ambedkar called the 'heart and soul' of the Constitution.",
+          "subject": "Indian Polity"
+        },
+        {
+          "id": "upsc_cse_q2",
+          "text": "The Tropic of Cancer does NOT pass through which of the following Indian states?",
+          "type": "single",
+          "options": [
+            "Gujarat",
+            "Chhattisgarh",
+            "Odisha",
+            "Punjab"
+          ],
+          "correctAnswer": "3",
+          "explanation": "The Tropic of Cancer passes through 8 Indian states: Gujarat, Rajasthan, Madhya Pradesh, Chhattisgarh, Jharkhand, West Bengal, Tripura, and Mizoram. Punjab is not among them.",
+          "subject": "Indian Geography"
+        },
+        {
+          "id": "upsc_cse_q3",
+          "text": "The Permanent Settlement of Bengal (1793) was introduced by:",
+          "type": "single",
+          "options": [
+            "Warren Hastings",
+            "Lord Cornwallis",
+            "Lord Wellesley",
+            "Lord Dalhousie"
+          ],
+          "correctAnswer": "1",
+          "explanation": "Lord Cornwallis introduced the Permanent Settlement in 1793, fixing land revenue permanently and creating the zamindari system in Bengal.",
+          "subject": "Modern Indian History"
+        },
+        {
+          "id": "upsc_cse_q4",
+          "text": "Which organization is the primary regulator of the insurance sector in India?",
+          "type": "single",
+          "options": [
+            "RBI",
+            "SEBI",
+            "IRDAI",
+            "PFRDA"
+          ],
+          "correctAnswer": "2",
+          "explanation": "The Insurance Regulatory and Development Authority of India (IRDAI) regulates and promotes the insurance industry in India.",
+          "subject": "Indian Economy"
+        },
+        {
+          "id": "upsc_cse_q5",
+          "text": "India's Green Revolution, led by high-yield seed varieties, is most strongly associated with a dramatic rise in the production of which crop?",
+          "type": "single",
+          "options": [
+            "Rice",
+            "Wheat",
+            "Cotton",
+            "Sugarcane"
+          ],
+          "correctAnswer": "1",
+          "explanation": "The Green Revolution of the 1960s-70s, driven by high-yielding wheat varieties and championed by M.S. Swaminathan, primarily boosted wheat output, especially in Punjab and Haryana.",
+          "subject": "Indian Economy"
+        },
+        {
+          "id": "upsc_cse_q6",
+          "text": "As per Article 80 of the Constitution, what is the maximum number of members the President can nominate to the Rajya Sabha?",
+          "type": "numerical",
+          "correctAnswer": "12",
+          "explanation": "Under Article 80, the President may nominate up to 12 members to the Rajya Sabha for their expertise in art, literature, science, and social service.",
+          "subject": "Indian Polity"
+        },
+        {
+          "id": "upsc_cse_q7",
+          "text": "Which of the following are Fundamental Duties listed under Article 51A of the Indian Constitution? (Select all that apply)",
+          "type": "multiple",
+          "options": [
+            "To abide by the Constitution and respect its ideals",
+            "To protect and improve the natural environment",
+            "To pay income tax honestly and on time",
+            "To develop scientific temper and the spirit of inquiry"
+          ],
+          "correctAnswer": "0,1,3",
+          "explanation": "Article 51A lists duties such as respecting the Constitution, protecting the environment, and developing scientific temper. Paying income tax is a legal obligation, not a listed Fundamental Duty.",
+          "subject": "Indian Polity"
+        },
+        {
+          "id": "upsc_cse_q8",
+          "text": "Who was the first Indian to be awarded a Nobel Prize?",
+          "type": "single",
+          "options": [
+            "Mahatma Gandhi",
+            "Rabindranath Tagore",
+            "C.V. Raman",
+            "Mother Teresa"
+          ],
+          "correctAnswer": "1",
+          "explanation": "Rabindranath Tagore won the Nobel Prize in Literature in 1913 for 'Gitanjali', becoming the first Indian and first Asian Nobel laureate.",
+          "subject": "Static GK"
+        },
+        {
+          "id": "upsc_cse_q9",
+          "text": "Chilika Lake, India's largest brackish-water lagoon, is located in which state?",
+          "type": "single",
+          "options": [
+            "Odisha",
+            "Andhra Pradesh",
+            "Tamil Nadu",
+            "Kerala"
+          ],
+          "correctAnswer": "0",
+          "explanation": "Chilika Lake, a Ramsar wetland site known for migratory birds and Irrawaddy dolphins, is located in Odisha.",
+          "subject": "Indian Geography"
+        },
+        {
+          "id": "upsc_cse_q10",
+          "text": "The Fifth Five-Year Plan (1974-79) is best known for adopting which key objective as its central slogan?",
+          "type": "single",
+          "options": [
+            "Rapid Industrialisation",
+            "Garibi Hatao (Removal of Poverty)",
+            "Green Revolution",
+            "Liberalisation of the economy"
+          ],
+          "correctAnswer": "1",
+          "explanation": "The Fifth Five-Year Plan adopted the objective of 'Garibi Hatao' (removal of poverty) alongside the goal of attaining self-reliance.",
+          "subject": "Indian Economy"
+        }
+      ]
+    },
+    {
+      "id": "jee-main-full",
+      "title": "JEE Main Full Syllabus Practice Set (Physics, Chemistry & Maths)",
+      "description": "Combined Physics, Chemistry, and Mathematics practice questions covering the full JEE Main syllabus at exam-level difficulty.",
+      "category": "JEE Prep",
+      "timeLimit": 25,
+      "totalMarks": 40,
+      "difficulty": "Hard",
+      "questions": [
+        {
+          "id": "jee_main_q1",
+          "text": "A particle moving in a straight line with uniform acceleration covers 10 m in the 1st second and 25 m in the 3rd second. What is its acceleration (in m/s²)?",
+          "type": "numerical",
+          "correctAnswer": "7.5",
+          "explanation": "Distance in the nth second: s_n = u + a(n - 0.5). So s1 = u + 0.5a = 10 and s3 = u + 2.5a = 25. Subtracting gives 2a = 15, so a = 7.5 m/s².",
+          "subject": "Physics - Kinematics"
+        },
+        {
+          "id": "jee_main_q2",
+          "text": "The dimensional formula of Planck's constant (h) is the same as that of:",
+          "type": "single",
+          "options": [
+            "Energy",
+            "Power",
+            "Angular momentum",
+            "Force"
+          ],
+          "correctAnswer": "2",
+          "explanation": "Planck's constant has SI units J·s = kg·m²/s, which is identical to the dimensional formula of angular momentum.",
+          "subject": "Physics - Units & Dimensions"
+        },
+        {
+          "id": "jee_main_q3",
+          "text": "Which of the following period-3 elements has the highest first ionization energy?",
+          "type": "single",
+          "options": [
+            "Na",
+            "Mg",
+            "Al",
+            "Si"
+          ],
+          "correctAnswer": "3",
+          "explanation": "First ionization energies (kJ/mol): Na≈496, Mg≈738, Al≈577, Si≈786. Al is lower than Mg due to its stable filled 3s² configuration, but overall Si has the highest value among these four.",
+          "subject": "Chemistry - Periodic Properties"
+        },
+        {
+          "id": "jee_main_q4",
+          "text": "Which gas is produced when zinc reacts with dilute hydrochloric acid?",
+          "type": "single",
+          "options": [
+            "Oxygen",
+            "Hydrogen",
+            "Chlorine",
+            "Carbon dioxide"
+          ],
+          "correctAnswer": "1",
+          "explanation": "Zn + 2HCl → ZnCl₂ + H₂↑. Zinc displaces hydrogen gas from dilute hydrochloric acid.",
+          "subject": "Chemistry - Reactions"
+        },
+        {
+          "id": "jee_main_q5",
+          "text": "What is the pH of a 0.001 M HCl solution, assuming complete dissociation?",
+          "type": "numerical",
+          "correctAnswer": "3",
+          "explanation": "pH = -log[H⁺] = -log(0.001) = -log(10⁻³) = 3.",
+          "subject": "Chemistry - Ionic Equilibrium"
+        },
+        {
+          "id": "jee_main_q6",
+          "text": "What is the derivative of sin(x)·cos(x) with respect to x?",
+          "type": "single",
+          "options": [
+            "cos(2x)",
+            "sin(2x)",
+            "-cos(2x)",
+            "2sin(x)cos(x)"
+          ],
+          "correctAnswer": "0",
+          "explanation": "d/dx[sin x · cos x] = cos²x - sin²x = cos(2x), using the product rule and double-angle identity.",
+          "subject": "Maths - Calculus"
+        },
+        {
+          "id": "jee_main_q7",
+          "text": "If α and β are the roots of x² - 7x + 12 = 0, what is the value of α + β?",
+          "type": "numerical",
+          "correctAnswer": "7",
+          "explanation": "For a quadratic ax² + bx + c = 0, the sum of roots = -b/a = -(-7)/1 = 7.",
+          "subject": "Maths - Quadratic Equations"
+        },
+        {
+          "id": "jee_main_q8",
+          "text": "How many distinct arrangements can be made using all the letters of the word 'LEVEL'?",
+          "type": "single",
+          "options": [
+            "30",
+            "60",
+            "120",
+            "20"
+          ],
+          "correctAnswer": "0",
+          "explanation": "LEVEL has 5 letters with L repeated twice and E repeated twice: 5!/(2!×2!) = 120/4 = 30.",
+          "subject": "Maths - Permutations & Combinations"
+        },
+        {
+          "id": "jee_main_q9",
+          "text": "Which of the following statements about Simple Harmonic Motion (SHM) are correct? (Select all that apply)",
+          "type": "multiple",
+          "options": [
+            "Acceleration is proportional to displacement and directed towards the mean position",
+            "For a simple pendulum with small oscillations, the time period is independent of amplitude",
+            "Maximum velocity occurs at the extreme positions",
+            "Maximum acceleration occurs at the mean position"
+          ],
+          "correctAnswer": "0,1",
+          "explanation": "In SHM, acceleration ∝ -displacement (restoring force towards mean position), and period is amplitude-independent for small oscillations. However, velocity is maximum at the mean position (not extremes) and acceleration is maximum at the extremes (not the mean), so statements 3 and 4 are false.",
+          "subject": "Physics - Oscillations"
+        },
+        {
+          "id": "jee_main_q10",
+          "text": "Which of the following is an example of a covalent network (giant covalent) solid?",
+          "type": "single",
+          "options": [
+            "NaCl",
+            "Diamond",
+            "Ice",
+            "Iron"
+          ],
+          "correctAnswer": "1",
+          "explanation": "Diamond is made of carbon atoms covalently bonded in a continuous 3D lattice, making it a covalent network solid — unlike NaCl (ionic), ice (molecular, H-bonded) or iron (metallic).",
+          "subject": "Chemistry - Bonding & Solid State"
+        }
+      ]
+    },
+    {
+      "id": "neet-ug-full",
+      "title": "NEET UG Full Syllabus Practice Set (Biology, Physics & Chemistry)",
+      "description": "Combined Biology, Physics, and Chemistry practice questions covering the full NEET UG syllabus at exam-level difficulty.",
+      "category": "Medical Exams",
+      "timeLimit": 25,
+      "totalMarks": 40,
+      "difficulty": "Hard",
+      "questions": [
+        {
+          "id": "neet_ug_q1",
+          "text": "Which cell organelle is known as the 'powerhouse of the cell'?",
+          "type": "single",
+          "options": [
+            "Nucleus",
+            "Mitochondria",
+            "Ribosome",
+            "Golgi apparatus"
+          ],
+          "correctAnswer": "1",
+          "explanation": "Mitochondria generate ATP through cellular respiration, earning them the nickname 'powerhouse of the cell'.",
+          "subject": "Biology - Cell Biology"
+        },
+        {
+          "id": "neet_ug_q2",
+          "text": "The functional and structural unit of the kidney is called the:",
+          "type": "single",
+          "options": [
+            "Neuron",
+            "Nephron",
+            "Alveolus",
+            "Villus"
+          ],
+          "correctAnswer": "1",
+          "explanation": "The nephron is the basic functional unit of the kidney, responsible for filtering blood and forming urine.",
+          "subject": "Biology - Human Physiology"
+        },
+        {
+          "id": "neet_ug_q3",
+          "text": "Which of the following are functions of the human liver? (Select all that apply)",
+          "type": "multiple",
+          "options": [
+            "Detoxification of harmful substances",
+            "Production of bile for fat digestion",
+            "Storage of glycogen",
+            "Production of insulin"
+          ],
+          "correctAnswer": "0,1,2",
+          "explanation": "The liver detoxifies substances, produces bile, and stores glycogen. Insulin is produced by the beta cells of the pancreas, not the liver.",
+          "subject": "Biology - Human Physiology"
+        },
+        {
+          "id": "neet_ug_q4",
+          "text": "DNA replication is described as 'semi-conservative' because:",
+          "type": "single",
+          "options": [
+            "Both resulting DNA strands are entirely new",
+            "Each daughter DNA molecule has one parental strand and one newly synthesized strand",
+            "Only one strand out of two is ever replicated",
+            "DNA replicates only during meiosis"
+          ],
+          "correctAnswer": "1",
+          "explanation": "The Meselson-Stahl experiment demonstrated that DNA replication is semi-conservative — each new DNA molecule retains one original (parental) strand and one newly synthesized strand.",
+          "subject": "Biology - Genetics"
+        },
+        {
+          "id": "neet_ug_q5",
+          "text": "A convex lens of focal length 20 cm has an object placed 30 cm in front of it. At what distance (in cm) from the lens is the image formed?",
+          "type": "numerical",
+          "correctAnswer": "60",
+          "explanation": "Using the lens formula 1/v - 1/u = 1/f with u = -30 cm, f = 20 cm: 1/v = 1/20 - 1/30 = 1/60, so v = 60 cm.",
+          "subject": "Physics - Optics"
+        },
+        {
+          "id": "neet_ug_q6",
+          "text": "The SI unit of electrical resistance is:",
+          "type": "single",
+          "options": [
+            "Ampere",
+            "Volt",
+            "Ohm",
+            "Watt"
+          ],
+          "correctAnswer": "2",
+          "explanation": "Electrical resistance is measured in Ohms (Ω), as defined by Ohm's Law (V = IR).",
+          "subject": "Physics - Electricity"
+        },
+        {
+          "id": "neet_ug_q7",
+          "text": "What is the correct IUPAC name for CH₃-CH₂-OH?",
+          "type": "single",
+          "options": [
+            "Methanol",
+            "Ethanol",
+            "Ethanal",
+            "Ethanoic acid"
+          ],
+          "correctAnswer": "1",
+          "explanation": "CH₃-CH₂-OH is a two-carbon alcohol, correctly named Ethanol under IUPAC nomenclature.",
+          "subject": "Chemistry - Organic Chemistry"
+        },
+        {
+          "id": "neet_ug_q8",
+          "text": "How many moles of oxygen (O₂) are needed to completely combust 1 mole of methane (CH₄)?",
+          "type": "numerical",
+          "correctAnswer": "2",
+          "explanation": "The balanced combustion equation is CH₄ + 2O₂ → CO₂ + 2H₂O, so 2 moles of O₂ are required per mole of methane.",
+          "subject": "Chemistry - Stoichiometry"
+        },
+        {
+          "id": "neet_ug_q9",
+          "text": "Photosynthesis primarily occurs in which part of a plant cell?",
+          "type": "single",
+          "options": [
+            "Mitochondria",
+            "Nucleus",
+            "Chloroplast",
+            "Ribosome"
+          ],
+          "correctAnswer": "2",
+          "explanation": "Chloroplasts contain chlorophyll and are the site of photosynthesis in plant cells.",
+          "subject": "Biology - Plant Physiology"
+        },
+        {
+          "id": "neet_ug_q10",
+          "text": "Which blood group is commonly known as the 'universal donor'?",
+          "type": "single",
+          "options": [
+            "A",
+            "B",
+            "AB",
+            "O negative"
+          ],
+          "correctAnswer": "3",
+          "explanation": "O negative blood lacks A, B, and Rh antigens, making it compatible with the widest range of recipients in emergency transfusions.",
+          "subject": "Biology - Human Physiology"
+        }
+      ]
+    }
+  ]
+}
